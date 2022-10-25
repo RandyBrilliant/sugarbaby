@@ -10,7 +10,13 @@ module.exports = {
       'secondary' : '#C09551',
       'tertiary' : '#F6D4B8',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'food-1': "url('./assets/img/1.jpg')",
+        'food-2': "url('./assets/img/2.jpg')",
+        'food-3': "url('./assets/img/3.jpg')",
+      }
+    }
   },
   plugins: [
     require('flowbite/plugin')

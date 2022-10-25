@@ -19,7 +19,7 @@ import { CarouselItem } from "../utils";
 const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row bg-white h-screen overflow-hidden" id="home">
-      <div className="h-full flex flex-col justify-end lg:justify-center text-center lg:text-left px-8 lg:px-12 lg:w-1/2 pb-5 lg:pb-0 z-10">
+      <div className="h-full flex flex-col justify-end lg:justify-center text-center lg:text-left px-4 sm:px-6 lg:px-8 lg:w-1/2 pb-5 lg:pb-0 z-10">
         <h1 className=" font-extrabold text-gray-900 text-4xl lg:text-7xl lg:leading-tight"><span className="text-secondary">Happiness</span> Always <br />Taste Heavenly.</h1>
         <p className="text-sm lg:text-xl text-gray-500 lg:max-w-2xl mt-2 lg:mt-5">
           A Korean-Inspired Pastry brand that not only tastes yummy, but also looks so sweet and cute - like Sugar Baby.
@@ -29,22 +29,22 @@ const Hero = () => {
           <a className="btn-hero btn-secondary" href="/">Order Now</a>
         </div>
       </div>
-      <div className="hidden w-1/2 lg:block">
+      <div className="hidden w-1/2 ml-auto lg:block">
         <Carousel slideInterval={5000} leftControl=" " rightControl=" ">
           <img
             src={Images1}
             alt="Strawberry Cake"
-            className="object-cover object-center"
+            className="object-cover hover:scale-125 transition duration-500"
           />
           <img
             src={Images2}
             alt="Cheese Cake"
-            className="object-cover object-center"
+            className="object-cover hover:scale-125 transition duration-500"
           />
           <img
             src={Images3}
             alt="Lemon Cake"
-            className="object-cover object-center"
+            className="object-cover hover:scale-125 transition duration-500"
           />
         </Carousel>  
       </div>

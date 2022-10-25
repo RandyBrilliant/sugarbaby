@@ -6,8 +6,8 @@ import { Avatar } from 'flowbite-react';
 const About = () => {
   return (
     <section id="about-us" className="mt-10 lg:mt-20 text-center">
-      <h2 className="text-4xl lg:text-6xl font-extrabold uppercase">our story</h2>
-      <p className="text-xs lg:text-sm font-medium uppercase mt-2 text-secondary">How Sugarbaby was founded at 2022.</p>
+      <h2 className="text-3xl lg:text-5xl font-extrabold uppercase">our story</h2>
+      <p className="text-xs lg:text-sm font-medium uppercase mt-1 lg:mt-2 text-secondary">How Sugarbaby was founded at 2022.</p>
       <div className="container px-8 lg:px-5 py-5 mx-auto flex flex-col">
         <div className="lg:w-4/6 mx-auto">
           <div className="rounded-lg h-64 overflow-hidden">
