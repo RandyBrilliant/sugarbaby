@@ -4,8 +4,8 @@ import Logo from '../assets/img/logo.svg';
 const navigation = [
   { name: 'Home', href: '#home', current: true },
   { name: 'About', href: '#about-us', current: false },
-  { name: 'Catalog', href: '/', current: false },
-  { name: 'Contacts', href: '/', current: false },
+  { name: 'Features', href: '#features', current: false },
+  { name: 'Catalog', href: '#catalog', current: false },
 ]
 
 function classNames(...classes) {

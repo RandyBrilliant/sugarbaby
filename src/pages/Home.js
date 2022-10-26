@@ -6,7 +6,7 @@ import About from '../components/About';
 import Features from '../components/Features';
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import Avatar from '../assets/img/avatar.jpg';
-import Catalog2 from '../components/Catalog2';
+import Menu from '../components/Menu';
 
 export default function Home() {
   return (
@@ -16,10 +16,10 @@ export default function Home() {
       <Hero />
     </header>
       <main>
+        <About />
         <Features />
         <Catalog />
-        <Catalog2 />
-        <About />
+        <Menu />
       </main>
       <Footer />
       <FloatingWhatsApp
