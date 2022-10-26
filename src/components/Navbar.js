@@ -1,4 +1,4 @@
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import Logo from '../assets/img/logo.svg';
 
 const navigation = [
@@ -17,7 +17,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-transparent absolute w-full md:w-auto z-50">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-20 py-1 sm:py-2">
+          <div className="mx-auto max-w-7xl px-5 lg:px-20 py-1 sm:py-2">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -56,15 +56,15 @@ export default function Navbar() {
                       alt="Sugarbaby"
                     />
                   </a>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:ml-10 sm:block">
+                  <div className="flex space-x-8">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.current ? 'text-secondary' : 'text-gray-400 hover:text-primary',
-                          'px-3 py-2 text-sm font-bold'
+                          'px-3 py-2 text-md font-bold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -76,25 +76,34 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3 w-screen h-screen bg-white">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'text-secondary' : 'text-gray-400 hover:text-primary',
-                    'block px-3 py-2 text-base font-bold'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
+          <Transition
+            show={open}
+            enter="transition duration-100 ease-out"
+            enterFrom="transform scale-95 opacity-0"
+            enterTo="transform scale-100 opacity-100"
+            leave="transition duration-75 ease-out"
+            leaveFrom="transform scale-100 opacity-100"
+            leaveTo="transform scale-95 opacity-0"
+          >
+            <Disclosure.Panel className="sm:hidden">
+              <div className="space-y-1 px-5 pt-2 pb-3 mx-4 rounded-md bg-white">
+                {navigation.map((item) => (
+                  <Disclosure.Button
+                    key={item.name}
+                    as="a"
+                    href={item.href}
+                    className={classNames(
+                      item.current ? 'text-secondary' : 'text-gray-400 hover:text-primary',
+                      'block py-2 text-base font-bold uppercase'
+                    )}
+                    aria-current={item.current ? 'page' : undefined}
+                  >
+                    {item.name}
+                  </Disclosure.Button>
+                ))}
+              </div>
+            </Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>

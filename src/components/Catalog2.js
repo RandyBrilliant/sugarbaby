@@ -7,34 +7,50 @@ const Catalog2 = () => {
   return (
     <section className="text-gray-600 body-font">
       <div className="px-20 mx-auto">
-        <div className="flex flex-wrap -m-4 items-center justify-center">
-          <div className="lg:w-1/4 md:w-1/2 p-4 w-full text-center group">
-            <a className="block relative h-80 w-full" href="/">
+        <div className="grid grid-cols-3 gap-4 items-center justify-center">
+          <div className="p-4 w-1/3 text-center group">
+            <a className="block relative" href="/">
               <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P1} />
             </a>
             <h3 className="text-gray-500 text-xs mb-1 italic">Slice Cake</h3>
             <h2 className="text-gray-900 title-font text-lg font-bold font-serif">The Catalyzer</h2>
             <p className="mt-1">Rp. 30.000,-</p>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 p-4 w-full text-center group">
-            <a className="block relative h-80 w-full" href="/">
-              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P2} />
+          <div className="p-4 h-80 w-80 text-center group">
+            <a className="block relative" href="/">
+              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P1} />
             </a>
             <h3 className="text-gray-500 text-xs mb-1 italic">Slice Cake</h3>
             <h2 className="text-gray-900 title-font text-lg font-bold font-serif">The Catalyzer</h2>
             <p className="mt-1">Rp. 30.000,-</p>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 p-4 w-full text-center group">
-            <a className="block relative h-80 w-full" href="/">
-              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P3} />
+          <div className="p-4 h-80 w-80 text-center group">
+            <a className="block relative" href="/">
+              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P1} />
             </a>
             <h3 className="text-gray-500 text-xs mb-1 italic">Slice Cake</h3>
             <h2 className="text-gray-900 title-font text-lg font-bold font-serif">The Catalyzer</h2>
             <p className="mt-1">Rp. 30.000,-</p>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 p-4 w-full text-center group">
-            <a className="block relative h-80 w-full" href="/">
-              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P4} />
+          <div className="p-4 h-80 w-80 text-center group">
+            <a className="block relative" href="/">
+              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P1} />
+            </a>
+            <h3 className="text-gray-500 text-xs mb-1 italic">Slice Cake</h3>
+            <h2 className="text-gray-900 title-font text-lg font-bold font-serif">The Catalyzer</h2>
+            <p className="mt-1">Rp. 30.000,-</p>
+          </div>
+          <div className="p-4 h-80 w-80 text-center group">
+            <a className="block relative" href="/">
+              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P1} />
+            </a>
+            <h3 className="text-gray-500 text-xs mb-1 italic">Slice Cake</h3>
+            <h2 className="text-gray-900 title-font text-lg font-bold font-serif">The Catalyzer</h2>
+            <p className="mt-1">Rp. 30.000,-</p>
+          </div>
+          <div className="p-4 h-80 w-80 text-center group">
+            <a className="block relative" href="/">
+              <img alt="ecommerce" className="object-cover object-center w-full h-full block group-hover:scale-90 transition duration-500" src={P1} />
             </a>
             <h3 className="text-gray-500 text-xs mb-1 italic">Slice Cake</h3>
             <h2 className="text-gray-900 title-font text-lg font-bold font-serif">The Catalyzer</h2>

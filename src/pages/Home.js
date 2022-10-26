@@ -16,10 +16,10 @@ export default function Home() {
       <Hero />
     </header>
       <main>
-        <Catalog2 />
-        <About />
         <Features />
         <Catalog />
+        <Catalog2 />
+        <About />
       </main>
       <Footer />
       <FloatingWhatsApp

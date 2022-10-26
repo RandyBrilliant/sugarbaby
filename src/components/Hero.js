@@ -1,6 +1,9 @@
 import Images1 from '../assets/img/1.jpg';
 import Images2 from '../assets/img/2.jpg';
 import Images3 from '../assets/img/3.jpg';
+import Logo1 from '../assets/img/1-1.svg';
+import Logo2 from '../assets/img/1-2.svg';
+import Logo3 from '../assets/img/1-3.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Pagination } from "swiper";
 
@@ -20,6 +23,14 @@ const Hero = () => {
           <a className="btn-hero btn-primary" href="#catalog">Explore Menu</a>
           <a className="btn-hero btn-secondary" href="/">Order Now</a>
         </div>
+        <section className="mt-20 hidden lg:block">
+          <h4 className="uppercase font-extrabold mb-5 text-md">Available on</h4>
+          <div className="flex items-center gap-8">
+            <img src={Logo1} alt="Grab Food" className="h-10 w-auto fill-gray-300" />
+            <img src={Logo2} alt="Shopee Food" className="h-10 w-auto fill-gray-300" />
+            <img src={Logo3} alt="Go Food" className="h-10 w-auto fill-gray-300" />
+          </div>
+        </section>
       </div>
       <div className="hidden ml-auto w-1/2 lg:block h-screen">
         <Swiper
