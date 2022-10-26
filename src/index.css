@@ -22,6 +22,11 @@ html {
   @apply border border-secondary text-secondary text-sm font-extrabold rounded-full;
 }
 
+/* target the active bullet */
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-secondary opacity-100;
+}
+
 @media (max-width: 1024px) {
   #home {
     background: linear-gradient(transparent 40%, white 60%), url('./assets/img/hero-mobile.jpg') 50% -25% no-repeat;

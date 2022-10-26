@@ -1,7 +1,7 @@
 import AboutBanner from '../assets/img/banner.jpg';
 import AvatarImage from '../assets/img/avatar.jpg';
 import Signature from '../assets/img/signature.png';
-import { Avatar } from 'flowbite-react';
+// import { Avatar } from 'flowbite-react';
 
 const About = () => {
   return (
@@ -20,11 +20,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row mt-10">
             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
               <div className="flex items-center justify-center">
-                <Avatar
-                  img={AvatarImage}
-                  rounded={true}
-                  size="lg"
-                />
+                <img src={AvatarImage} alt="Catherine Pho" className="rounded-full w-20 h-20 object-cover object-center" />
               </div>
               <div className="flex flex-col items-center text-center justify-center">
                 <h3 className="font-bold mt-4 text-gray-900 text-lg">Catherine Pho</h3>

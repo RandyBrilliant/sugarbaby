@@ -1,6 +1,3 @@
-import AvatarImage from '../assets/img/avatar.jpg';
-import { Avatar } from 'flowbite-react';
-
 const Features = () => {
   return (
     <section id="features" className="mt-10 lg:mt-20 text-center px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-10">

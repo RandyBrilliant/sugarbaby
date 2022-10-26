@@ -1,5 +1,4 @@
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Logo from '../assets/img/logo.svg';
 
 const navigation = [
@@ -13,12 +12,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-transparent absolute w-full md:w-auto z-50">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1 sm:py-2">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-20 py-1 sm:py-2">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -79,7 +78,7 @@ export default function Example() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3">
+            <div className="space-y-1 px-2 pt-2 pb-3 w-screen h-screen bg-white">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
