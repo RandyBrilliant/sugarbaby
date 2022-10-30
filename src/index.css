@@ -10,26 +10,14 @@ html {
   box-sizing: inherit;
 }
 
-.btn-hero {
-  @apply px-6 py-3 lg:px-10 lg:py-4 w-full lg:w-auto;
-}
-
-.btn-primary {
-  @apply bg-secondary text-white text-sm font-extrabold rounded-full;
-}
-
-.btn-secondary {
-  @apply border border-secondary text-secondary text-sm font-extrabold rounded-full;
-}
-
 /* target the active bullet */
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-secondary opacity-100;
 }
 
 @media (max-width: 1024px) {
-  #home {
-    background: linear-gradient(transparent 40%, white 60%), url('./assets/img/hero-mobile.jpg') 50% -25% no-repeat;
+  .background-divider {
+    background: linear-gradient(transparent 40%, white 65%);
     background-size: cover, contain;
   }
 }
