@@ -2,6 +2,7 @@ import P1 from '../assets/img/p-1.png';
 import P2 from '../assets/img/p-2.png';
 import P3 from '../assets/img/p-3.png';
 import P4 from '../assets/img/p-4.png';
+import { PrimaryButton } from './Button';
 
 const Menu = () => {
   return (
@@ -59,6 +60,9 @@ const Menu = () => {
             Rp. 30.000,-
           </p>
         </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <PrimaryButton href="/" content="Explore More" />
       </div>
     </section>
   );

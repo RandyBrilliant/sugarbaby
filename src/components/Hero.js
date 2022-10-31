@@ -14,7 +14,7 @@ import { PrimaryButton, SecondaryButton } from './Button';
 
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row bg-white h-screen overflow-hidden" id="home">
+    <section className="flex flex-col-reverse lg:flex-row bg-white h-screen max-h-screen overflow-hidden" id="home">
       <div className="w-full h-full flex flex-col justify-end lg:justify-center text-center lg:text-left px-4 sm:px-6 lg:px-20 lg:w-1/2 pb-5 lg:pb-0 z-20">
         <h1 className="font-extrabold text-gray-900 text-4xl lg:text-7xl lg:leading-snug"><span className="text-secondary">Happiness</span> Always <br />Taste Heavenly.</h1>
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start mt-6 uppercase w-full gap-2 lg:gap-4">
