@@ -1,17 +1,96 @@
-export const carouselItem = [
+export const cakeList = [
   {
-    'id': 1,
-    'name': 'Cheese Cake',
-    'img': '../assets/img/1.jpg'
+    'id': 'vanilla-creme-brule',
+    'name': 'Vanilla Creme Brule',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
   },
   {
-    'id': 2,
-    'name': 'Lemon Cake',
-    'img': '../assets/img/2.jpg'
+    'id': 'milk-tea-chocolate',
+    'name': 'Milk Tea Chocolate',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
   },
   {
-    'id': 3,
-    'name': 'Strawberry Cake',
-    'img': '../assets/img/3.jpg'
+    'id': 'mango-tango',
+    'name': 'Mango Tango',
+    'full-price': 235000,
+    'slice-price': 55000,
+    'description': '',
   },
+  {
+    'id': 'sunny-lemonade',
+    'name': 'Sunny Lemonade',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
+  },
+  {
+    'id': 'Strawberry Bliss',
+    'name': 'Vanilla Creme Brule',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
+  },
+  {
+    'id': 'strawberry-bliss',
+    'name': 'Strawberry Bliss',
+    'full-price': 235000,
+    'slice-price': 55000,
+    'description': '',
+  },
+]
+
+export const quicheList = [
+  {
+    'id': 'vanilla-creme-brule',
+    'name': 'Vanilla Creme Brule',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
+  },
+  {
+    'id': 'milk-tea-chocolate',
+    'name': 'Milk Tea Chocolate',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
+  },
+  {
+    'id': 'mango-tango',
+    'name': 'Mango Tango',
+    'full-price': 235000,
+    'slice-price': 55000,
+    'description': '',
+  },
+  {
+    'id': 'sunny-lemonade',
+    'name': 'Sunny Lemonade',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
+  },
+  {
+    'id': 'Strawberry Bliss',
+    'name': 'Vanilla Creme Brule',
+    'full-price': 225000,
+    'slice-price': 48000,
+    'description': '',
+  },
+  {
+    'id': 'strawberry-bliss',
+    'name': 'Strawberry Bliss',
+    'full-price': 235000,
+    'slice-price': 55000,
+    'description': '',
+  },
+]
+
+export const navigation = [
+  { name: 'Home', href: '#home', current: true },
+  { name: 'About', href: '#about-us', current: false },
+  { name: 'Features', href: '#features', current: false },
+  { name: 'Catalog', href: '#catalog', current: false },
 ]

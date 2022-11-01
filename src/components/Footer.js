@@ -1,4 +1,5 @@
 import Logo from '../assets/img/logo.svg';
+import { navigation, cakeList } from '../utils';
 
 const Footer = () => {
   return (
@@ -14,38 +15,31 @@ const Footer = () => {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-bold uppercase text-lg mb-3">NAVIGATION</h2>
             <nav className="list-none mb-10">
-              <li>
-                <a href="#home" className="text-gray-900 hover:text-secondary text-sm">Home</a>
-              </li>
-              <li>
-                <a href="#about" className="text-gray-900 hover:text-secondary text-sm">About</a>
-              </li>
-              <li>
-                <a href="#features" className="text-gray-900 hover:text-secondary text-sm">Features</a>
-              </li>
-              <li>
-                <a href="#catalog" className="text-gray-900 hover:text-secondary text-sm">Catalog</a>
-              </li>
+              {navigation.map(item => (
+                <li>
+                  <a 
+                    href={item.href} 
+                    className="text-gray-900 hover:text-secondary text-sm"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-bold uppercase text-lg mb-3">SLICE CAKE</h2>
             <nav className="list-none mb-10">
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Strawberry Bliss</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Milk Tea Chocolate</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Vanilla Creme Brulee</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Mango Tango</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Sunny Lemonade</a>
-              </li>
+              {cakeList.map(item => (
+                <li>
+                  <a 
+                    href={item.id} 
+                    className="text-gray-900 hover:text-secondary text-sm"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
