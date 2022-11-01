@@ -15,13 +15,6 @@ module.exports = {
       gray: colors.gray,
       red: colors.red,
     },
-    extend: {
-      backgroundImage: {
-        'food-1': "url('./assets/img/1.jpg')",
-        'food-2': "url('./assets/img/2.jpg')",
-        'food-3': "url('./assets/img/3.jpg')",
-      }
-    }
   },
   plugins: [],
 }

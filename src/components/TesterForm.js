@@ -1,43 +1,89 @@
 import Image from '../assets/img/tester.jpg';
-import { PrimaryButton } from './Button';
+import TextInput from './Input/TextInput';
+
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { TesterSchema } from '../validators/schema';
+import TextAreaInput from './Input/TextAreaInput';
 
 const TesterForm = () => {
+  const { register, handleSubmit, formState:{ errors } } = useForm({
+    resolver: yupResolver(TesterSchema)
+  });
+
+  const handleTester = data => {
+    console.log(data);
+  }
+
+
   return (
     <section className="bg-white py-6 sm:py-8 lg:py-12" id="tester-form">
       <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
         <div className="text-white flex flex-col sm:flex-row bg-secondary rounded-lg">
-          <div className="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-6 sm:p-10">
+          <div className="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-6 sm:p-10 mt-10">
             <h2 className=" text-xl md:text-3xl lg:text-5xl font-bold mb-4">Fulfill Your Cravings!</h2>
-
-            <p className="max-w-md mb-8">As we will be opening our brand new store at November 13, 2022, we will be sending free samplea of our cakes right to your front door <strong><em>(For Medan Residences!)</em></strong>. You can write down your detail below and get the chances to taste our slice of happiness!</p>
-
-            <form className="grid sm:grid-cols-2 gap-4 mx-auto">
-              <div>
-                <label htmlFor="first-name" className="inline-block text-sm sm:text-base mb-2 after:contents('*')">First name *</label>
-                <input name="first-name" id="first-name" className="text-gray-900 w-full bg-gray-50 border focus:ring ring-tertiary rounded outline-none transition duration-100 px-3 py-2" />
+            <p className="mb-8">
+              Hi There ! we are pleased to tell you that we will be launching our brand new online dessert shop on <strong><em>November 13th</em></strong>! Hence, we will be sending free samples of our baked goods to all of you ❤ please write down your detail below and feel free to choose and taste our slice of happiness ʕ•ᴥ•ʔﾉ♡
+              <span className="block italic mt-2">(medan residences only and free of charges)</span>
+            </p>
+            <form className="grid sm:grid-cols-2 gap-2 gap-y-1 mx-auto w-full" onSubmit={handleSubmit(handleTester)} noValidate>
+              <TextInput
+                label={"First Name"}
+                name={'text'}
+                placeholder={'Enter your First Name'}
+                type={"first_name"}
+                register={register}
+                errors={errors}
+                required
+              />
+              <TextInput
+                label={"Last Name"}
+                name={'text'}
+                placeholder={'Enter your Last Name'}
+                type={"last_name"}
+                register={register}
+                errors={errors}
+              />
+              <div className="block w-full col-span-full">
+                <TextInput
+                  label={"Email Address"}
+                  name={'email'}
+                  placeholder={'Enter your Email Address'}
+                  type={"email"}
+                  required
+                  register={register}
+                  errors={errors}
+                />
               </div>
-
-              <div>
-                <label htmlFor="last-name" className="inline-block text-sm sm:text-base mb-2">Last name</label>
-                <input name="last-name" className="text-gray-900 w-full bg-gray-50 border focus:ring ring-tertiary rounded outline-none transition duration-100 px-3 py-2" />
+              <div className="block w-full col-span-full">
+                <TextInput
+                  label={"Phone Number"}
+                  name={'phone_number'}
+                  placeholder={'Enter your Phone Number'}
+                  type={"text"}
+                  required
+                  register={register}
+                  errors={errors}
+                />
               </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="email" className="inline-block text-sm sm:text-base mb-2">Email *</label>
-                <input name="email" className="text-gray-900 w-full bg-gray-50 border focus:ring ring-tertiary rounded outline-none transition duration-100 px-3 py-2" />
-              </div>
-
-              <div className="sm:col-span-2">
-                <label htmlFor="subject" className="inline-block text-sm sm:text-base mb-2">Phone Number *</label>
-                <input name="subject" className="text-gray-900 w-full bg-gray-50 border focus:ring ring-tertiary rounded outline-none transition duration-100 px-3 py-2" />
-              </div>
-
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className="inline-block text-sm sm:text-base mb-2">Home Address *</label>
-                <textarea name="message" className="text-gray-900 w-full h-64 bg-gray-50 border focus:ring ring-tertiary rounded outline-none transition duration-100 px-3 py-2"></textarea>
+              <div className="block w-full col-span-full">
+                <TextAreaInput
+                  label={"Home Address"}
+                  name={'address_line'}
+                  required
+                  register={register}
+                  errors={errors}
+                />
               </div>
 
               <div className="sm:col-span-2 text-center sm:text-left">
-                <PrimaryButton href="/" content="Send Form" />
+                <button className="w-full lg:w-auto px-6 py-3 lg:px-10 lg:py-4 relative rounded-full group font-medium text-white inline-block" type="submit">
+                  <span className="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-secondary to-primary"></span>
+                  <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded-full opacity-50 from-secondary to-primary"></span>
+                  <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-secondary to-primary"></span>
+                  <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primary from-secondary"></span>
+                  <span className=" relative text-sm font-extrabold">Send Form</span>
+                </button>
               </div>
             </form>
             <p className="text-primary text-sm italic mt-10">By sending your data, you agree to our <a href="/" class="hover:text-white active:text-tertiary underline transition duration-100">Privacy Policy</a>.</p>

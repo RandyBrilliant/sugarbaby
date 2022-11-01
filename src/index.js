@@ -5,16 +5,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// eslint-disable-next-line
 import "swiper/css/bundle";
 import './index.css';
 
 import App from './App';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
   },
 ]);
 

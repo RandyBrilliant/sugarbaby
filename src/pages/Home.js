@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Catalog from '../components/Catalog';
-import About from '../components/About';
+// import About from '../components/About';
 import Features from '../components/Features';
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import Avatar from '../assets/img/avatar.jpg';
@@ -21,7 +21,7 @@ export default function Home() {
         <TesterForm />
         <Catalog />
         <Menu />
-        <About />
+        {/* <About /> */}
       </main>
       <Footer />
       <FloatingWhatsApp
