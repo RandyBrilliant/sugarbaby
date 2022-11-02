@@ -2,8 +2,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Catalog from '../components/Catalog';
-// import About from '../components/About';
 import Features from '../components/Features';
+import About from '../components/About';
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import Avatar from '../assets/img/avatar.jpg';
 import Menu from '../components/Menu';
@@ -17,11 +17,11 @@ export default function Home() {
       <Hero />
     </header>
       <main>
+        <About />
         <Features />
         <TesterForm />
         <Catalog />
         <Menu />
-        {/* <About /> */}
       </main>
       <Footer />
       <FloatingWhatsApp

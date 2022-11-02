@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { TesterSchema } from '../validators/schema';
 import TextAreaInput from './Input/TextAreaInput';
+import Dropdown from './Input/Dropdown';
 
 const TesterForm = () => {
   const { register, handleSubmit, formState:{ errors } } = useForm({
@@ -23,7 +24,7 @@ const TesterForm = () => {
           <div className="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-6 sm:p-10 mt-10">
             <h2 className=" text-xl md:text-3xl lg:text-5xl font-bold mb-4">Fulfill Your Cravings!</h2>
             <p className="mb-8">
-              Hi There ! we are pleased to tell you that we will be launching our brand new online dessert shop on <strong><em>November 13th</em></strong>! Hence, we will be sending free samples of our baked goods to all of you ❤ please write down your detail below and feel free to choose and taste our slice of happiness ʕ•ᴥ•ʔﾉ♡
+              <span className="block text-lg font-bold italic">Hi There!</span> We are pleased to tell you that we will be launching our brand new online dessert shop on <strong><em>November 13th</em></strong>! <br />Hence, we will be sending free samples of our baked goods to all of you.<br /> Please write down your detail below and feel free to choose and taste our slice of happiness.
               <span className="block italic mt-2">(medan residences only and free of charges)</span>
             </p>
             <form className="grid sm:grid-cols-2 gap-2 gap-y-1 mx-auto w-full" onSubmit={handleSubmit(handleTester)} noValidate>
@@ -64,6 +65,15 @@ const TesterForm = () => {
                   required
                   register={register}
                   errors={errors}
+                />
+              </div>
+              <div className="block w-full col-span-full">
+                <Dropdown
+                  label={"Choose your favorites!"}
+                  name={'type'}
+                  register={register}
+                  errors={errors}
+                  required
                 />
               </div>
               <div className="block w-full col-span-full">

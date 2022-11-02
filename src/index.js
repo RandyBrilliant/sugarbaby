@@ -10,11 +10,17 @@ import './index.css';
 
 import App from './App';
 import Error from './pages/Error';
+import FAQ from './pages/FAQ';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
+  },
+  {
+    path: "faq",
+    element: <FAQ />,
     errorElement: <Error />,
   },
 ]);
