@@ -1,15 +1,13 @@
-import Images1 from '../assets/img/1.jpg';
-import Images2 from '../assets/img/2.jpg';
-import Images3 from '../assets/img/3.jpg';
-import Logo1 from '../assets/img/1-1.svg';
-import Logo2 from '../assets/img/1-3.png';
-import Logo3 from '../assets/img/1-3.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Zoom, EffectFade, Autoplay, Pagination } from "swiper";
+import { Zoom, EffectFade, Autoplay } from "swiper";
+
+import { cakeList, merchantList } from "../utils";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+
+
 import { PrimaryButton, SecondaryButton } from './Button';
 
 const Hero = () => {
@@ -24,9 +22,9 @@ const Hero = () => {
         <section className="hidden lg:block absolute left-20 bottom-10">
           <h4 className="uppercase font-extrabold mb-3 text-md">Available on</h4>
           <div className="flex items-center gap-7">
-            <img src={Logo1} alt="Grab Food" className="h-8 w-auto" />
-            <img src={Logo3} alt="Go Food" className="h-8 w-auto" />
-            <img src={Logo2} alt="Tokopedia" className="h-8 w-auto" />
+            {merchantList.map(merchant => (
+              <img src={merchant.urls} alt={merchant.title} key={merchant.id} className="h-8 w-auto" />
+            ))}
           </div>
         </section>
       </div>
@@ -36,36 +34,21 @@ const Hero = () => {
           effect={"fade"}
           zoom={true}
           autoplay={{
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: true,
           }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Zoom, EffectFade, Autoplay, Pagination]}
+          modules={[Zoom, EffectFade, Autoplay]}
           className="h-full w-full"
-        >
-          <SwiperSlide className="drop-shadow-md group">
-            <img
-              src={Images1}
-              alt="Strawberry Cake"
-              className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300"
-            />
-          </SwiperSlide>
-          <SwiperSlide className="drop-shadow-md group">
-            <img
-              src={Images2}
-              alt="Cheese Cake"
-              className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300"
-            />
-          </SwiperSlide>
-          <SwiperSlide className="drop-shadow-md group">
-            <img
-              src={Images3}
-              alt="Lemon Cake"
-              className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300"
-            />
-          </SwiperSlide>
+        > 
+          {cakeList.map(cake => (
+            <SwiperSlide className="drop-shadow-md group" key={cake.id}>
+              <img
+                src={cake.urls}
+                alt={cake.id}
+                className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

@@ -1,7 +1,9 @@
 import { Disclosure, Transition } from '@headlessui/react';
-import Logo from '../assets/img/logo.svg';
+import { NavLink } from 'react-router-dom';
+
 import { navigation } from '../utils';
 
+import Logo from '../assets/img/logo.svg';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -44,27 +46,28 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center lg:items-center justify-start">
-                  <a href="/">
+                  <NavLink to="/">
                     <img
                       className="block h-12 w-auto"
                       src={Logo}
                       alt="Sugarbaby"
                     />
-                  </a>
+                  </NavLink>
                 <div className="hidden lg:ml-10 lg:block">
                   <div className="flex space-x-8">
                     {navigation.map((item) => (
-                      <a
+                      <NavLink
+                        end
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
-                          item.current ? 'text-secondary' : 'text-gray-400 hover:text-primary',
+                          ({ isActive }) => isActive ? 'text-secondary' : 'text-gray-400 hover:text-primary',
                           'px-3 py-2 text-md font-bold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -81,14 +84,14 @@ export default function Navbar() {
             leaveTo="transform scale-95 opacity-0"
           >
             <Disclosure.Panel className="lg:hidden">
-              <div className="space-y-1 px-5 pt-2 pb-3 mx-4 rounded-md bg-white">
+              <div className="space-y-1 px-5 pt-2 pb-3 mx-4 rounded-md bg-white shadow-lg">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
-                    as="a"
-                    href={item.href}
+                    as={NavLink}
+                    to={item.href}
                     className={classNames(
-                      item.current ? 'text-secondary' : 'text-gray-400 hover:text-primary',
+                      ({ isActive }) => isActive ? 'text-secondary' : 'text-gray-400 hover:text-primary',
                       'block py-2 text-base font-bold uppercase'
                     )}
                     aria-current={item.current ? 'page' : undefined}
