@@ -30,18 +30,18 @@ const TesterForm = () => {
             <form className="grid sm:grid-cols-2 gap-2 gap-y-1 mx-auto w-full" onSubmit={handleSubmit(handleTester)} noValidate>
               <TextInput
                 label={"First Name"}
-                name={'text'}
+                name={"first_name"}
                 placeholder={'Enter your First Name'}
-                type={"first_name"}
+                type={"text"}
                 register={register}
                 errors={errors}
                 required
               />
               <TextInput
                 label={"Last Name"}
-                name={'text'}
+                name={'last_name'}
                 placeholder={'Enter your Last Name'}
-                type={"last_name"}
+                type={"text"}
                 register={register}
                 errors={errors}
               />
@@ -98,7 +98,7 @@ const TesterForm = () => {
             </form>
             <p className="text-primary text-sm italic mt-10">By sending your data, you agree to our <a href="/" class="hover:text-white active:text-tertiary underline transition duration-100">Privacy Policy</a>.</p>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-[1080px] order-first sm:order-none bg-gray-700 rounded-tr-lg rounded-br-lg overflow-hidden">
+          <div className="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-full order-first sm:order-none bg-gray-700 rounded-tr-lg rounded-br-lg overflow-hidden">
             <img src={Image} loading="lazy" alt="Dom Hill" className="w-full h-full object-cover object-center" />
           </div>
         </div>

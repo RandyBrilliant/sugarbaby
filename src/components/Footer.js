@@ -4,7 +4,7 @@ import { navigation, cakeList } from '../utils';
 const Footer = () => {
   return (
     <footer id="footer">
-      <div className="mt-10 lg:mt-20 mx-4 border-t-2 sm:mx-6 lg:mx-20 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div className="mt-10 lg:mt-20 mx-4 border-t-2 sm:mx-6 lg:mx-20 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a href="/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img src={Logo} alt="Sugarbaby" className="h-20 object-cover object-center" />
