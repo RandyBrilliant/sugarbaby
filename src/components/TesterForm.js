@@ -12,10 +12,23 @@ const TesterForm = () => {
     resolver: yupResolver(TesterSchema)
   });
 
-  const handleTester = data => {
-    console.log(data);
+  const handleTester = async data => {
+    try {
+      const response = await fetch(
+          "https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form",
+          {
+              method: "post",
+              body: JSON.stringify(data),
+              headers: {
+                "Content-Type": "application/json"
+              }
+          }
+      );
+      const json = await response.json();
+    } catch (error) {
+        console.log(error);
+    }
   }
-
 
   return (
     <section className="bg-white py-6 sm:py-8 lg:py-12" id="tester-form">
@@ -76,6 +89,71 @@ const TesterForm = () => {
                   required
                 />
               </div>
+              {/* <div className="block w-full col-span-full">
+                <p className="text-md font-bold">Pick your desired flavours! <span className="font-normal italic">(You can pick up to 2 flavours.)</span></p>
+                <div>
+                  <label className="relative w-full inline-flex items-center" htmlFor="strawberry_bliss">
+                    <input
+                      type='checkbox'
+                      name='flavour.strawberry_bliss'
+                      id="strawberry_bliss"
+                      value='Strawberry Bliss'
+                      placeholder='Strawberry Bliss'
+                      {...register('flavour.strawberry_bliss')}
+                      className="mr-3"
+                    />
+                    Strawberry Bliss
+                  </label>
+                  <label className="relative w-full inline-flex items-center" htmlFor="milk_tea_chocolate">
+                    <input
+                      type='checkbox'
+                      name='flavour.milk_tea_chocolate'
+                      id="milk_tea_chocolate"
+                      value='Milk Tea Chocolate'
+                      placeholder='Milk Tea Chocolate'
+                      {...register('flavour.milk_tea_chocolate')}
+                      className="mr-3"
+                    />
+                    Milk Tea Chocolate
+                  </label>
+                  <label className="relative w-full inline-flex items-center" htmlFor="vanilla_creme_brulee">
+                    <input
+                      type='checkbox'
+                      name='flavour.vanilla_creme_brulee'
+                      id="vanilla_creme_brulee"
+                      value='Vanilla Creme Brulee'
+                      placeholder='Vanilla Creme Brulee'
+                      {...register('flavour.vanilla_creme_brulee')}
+                      className="mr-3"
+                    />
+                    Vanilla Creme Brulee
+                  </label>
+                  <label className="relative w-full inline-flex items-center" htmlFor="mango_tango">
+                    <input
+                      type='checkbox'
+                      name='flavour.mango_tango'
+                      id="mango_tango"
+                      value='Mango Tango'
+                      placeholder='Mango Tango'
+                      {...register('flavour.mango_tango')}
+                      className="mr-3"
+                    />
+                    Mango Tango
+                  </label>
+                  <label className="relative w-full inline-flex items-center" htmlFor="sunny_lemonade">
+                    <input
+                      type='checkbox'
+                      name='flavour.sunny_lemonade'
+                      id="sunny_lemonade"
+                      value='Sunny Lemonade'
+                      placeholder='Sunny Lemonade'
+                      {...register('flavour.sunny_lemonade')}
+                      className="mr-3"
+                    />
+                    Sunny Lemonade
+                  </label>
+                </div>
+              </div> */}
               <div className="block w-full col-span-full">
                 <TextAreaInput
                   label={"Home Address"}
@@ -85,7 +163,6 @@ const TesterForm = () => {
                   errors={errors}
                 />
               </div>
-
               <div className="sm:col-span-2 text-center sm:text-left">
                 <button className="w-full lg:w-auto px-6 py-3 lg:px-10 lg:py-4 relative rounded-full group font-medium text-white inline-block" type="submit">
                   <span className="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-secondary to-primary"></span>

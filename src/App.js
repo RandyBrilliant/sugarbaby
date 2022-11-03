@@ -5,6 +5,7 @@ import Avatar from './assets/img/avatar.jpg';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 import Home from './pages/Home';
 import Error from './pages/Error';
@@ -15,7 +16,7 @@ import Product from "./pages/Product";
 
 const App = () => {
   return (
-    <>
+    <ScrollToTop>
       <header>
         <Navbar />
       </header>
@@ -25,7 +26,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/catalog" element={<Catalog />} />
-          <Route path="/catalog/:id" element={<Product />} />
+          <Route path="/catalog/:id" element={<Product />} /> 
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
@@ -41,7 +42,7 @@ const App = () => {
         avatar={Avatar}
         statusMessage={`Typically reply within 5 minutes`}
       />
-    </>
+    </ScrollToTop>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../assets/img/logo.svg';
 import { navigation, cakeList } from '../utils';
 
@@ -32,12 +33,12 @@ const Footer = () => {
             <nav className="list-none mb-10">
               {cakeList.map(item => (
                 <li>
-                  <a 
-                    href={item.id} 
+                  <Link 
+                    to={`/catalog/${item.id}`} 
                     className="text-gray-900 hover:text-secondary text-sm"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </nav>

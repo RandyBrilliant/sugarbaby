@@ -116,6 +116,54 @@ export const cakeList = [
   },
 ]
 
+export const quicheList = {
+  'id': 'ultimate-quiche-lorraine',
+  'name': 'Ultimate Quiche Lorraine',
+  'full-price': 225000,
+  'slice-price': 45000,
+  'description': '',
+  'urls': './img/products/quiche.jpg',
+  'flavours': ['beef', 'chicken', 'triple cheese', 'mushroom']
+}
+
+export const breadList = [
+  {
+    'id': 'nutella',
+    'name': 'Nutella',
+    'price': 10500,
+    'description': '',
+    'urls': './img/products/nutella.jpg',
+  },
+  {
+    'id': 'chicken-floss',
+    'name': 'Chicken Floss',
+    'price': 10500,
+    'description': '',
+    'urls': './img/products/chicken-floss.jpg',
+  },
+  {
+    'id': 'donut-ceres',
+    'name': 'Donut Ceres',
+    'price': 10500,
+    'description': '',
+    'urls': './img/products/donut-ceres.jpg',
+  },
+  {
+    'id': 'ogura',
+    'name': 'Ogura',
+    'price': 8500,
+    'description': '',
+    'urls': './img/products/bread.jpg',
+  },
+  {
+    'id': 'cheese',
+    'name': 'Cheese',
+    'price': 8500,
+    'description': '',
+    'urls': './img/products/cheese.jpg',
+  },
+]
+
 export const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'About', href: 'about', current: false },

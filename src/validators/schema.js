@@ -5,5 +5,15 @@ export const TesterSchema = yup.object({
   last_name : yup.string().nullable().max(255, 'You can have maximum characters of 255!'),
   email: yup.string().email("Please enter appropriate format of email address").required('Please enter your email address').required('Please enter your email address').max(255, 'You can have maximum characters of 255!'),
   phone_number : yup.string().required('Please enter your Phone Number').max(15, 'You can have maximum characters of 15!'),
+  type : yup.string().required("Please choose the flavour!"),
   address_line : yup.string().required("Please enter your Home Address"),
 });
+
+// flavour: yup.object().shape({
+//   strawberry_bliss: yup.boolean(),
+//   milk_tea_chocolate : yup.boolean(), 
+//   vanilla_creme_brulee : yup.boolean(), 
+//   mango_tango : yup.boolean(), 
+//   sunny_lemonade : yup.boolean(), 
+// }),
+

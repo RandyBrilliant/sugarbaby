@@ -5,10 +5,6 @@ import { navigation } from '../utils';
 
 import Logo from '../assets/img/logo.svg';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-transparent absolute w-full lg:w-auto z-50">
@@ -60,10 +56,7 @@ export default function Navbar() {
                         end
                         key={item.name}
                         to={item.href}
-                        className={classNames(
-                          ({ isActive }) => isActive ? 'text-secondary' : 'text-gray-400 hover:text-primary',
-                          'px-3 py-2 text-md font-bold'
-                        )}
+                        className={({ isActive }) => "px-3 py-2 text-md font-bold " + (isActive ? "text-secondary" : "text-gray-400 hover:text-primary")}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -90,10 +83,7 @@ export default function Navbar() {
                     key={item.name}
                     as={NavLink}
                     to={item.href}
-                    className={classNames(
-                      ({ isActive }) => isActive ? 'text-secondary' : 'text-gray-400 hover:text-primary',
-                      'block py-2 text-base font-bold uppercase'
-                    )}
+                    className={({ isActive }) => "block py-2 text-base font-bold uppercase " + (isActive ? "text-secondary" : "text-gray-400 hover:text-primary")}
                     aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}
