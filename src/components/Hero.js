@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Zoom, EffectFade, Autoplay } from "swiper";
+import { EffectFade, Autoplay } from "swiper";
 
 import { cakeList, merchantList } from "../utils";
 
@@ -32,20 +32,19 @@ const Hero = () => {
       <div className="ml-auto w-screen h-5/6 lg:w-1/2 lg:h-screen">
         <Swiper
           effect={"fade"}
-          zoom={true}
           autoplay={{
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: true,
           }}
-          modules={[Zoom, EffectFade, Autoplay]}
+          modules={[EffectFade, Autoplay]}
           className="h-full w-full"
         > 
           {cakeList.map(cake => (
-            <SwiperSlide className="drop-shadow-md group" key={cake.id}>
+            <SwiperSlide className="drop-shadow-md" key={cake.id}>
               <img
                 src={cake.urls}
                 alt={cake.id}
-                className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300"
+                className="w-full h-full object-cover object-center"
               />
             </SwiperSlide>
           ))}

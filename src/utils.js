@@ -76,10 +76,10 @@ export const merchantList = [
 export const cakeList = [
   {
     'id': 'vanilla-creme-brule',
-    'name': 'Vanilla Creme Brule',
+    'name': 'Vanilla Crème Brûlée',
     'full-price': 225000,
     'slice-price': 45000,
-    'description': 'Layers of moist vanilla cake with caramelized creme brulee fillings covered with silky vanilla frosting.',
+    'description': 'Layers of moist vanilla cake with caramelized crème brûlée fillings covered with silky vanilla frosting.',
     'urls': './img/products/vanilla-creme-brule.jpg',
   },
   {
@@ -121,7 +121,7 @@ export const quicheList = {
   'name': 'Ultimate Quiche Lorraine',
   'full-price': 225000,
   'slice-price': 45000,
-  'description': '',
+  'description': 'Savory egg pie with your choices of flavour.',
   'urls': './img/products/quiche.jpg',
   'flavours': ['beef', 'chicken', 'triple cheese', 'mushroom']
 }
@@ -131,35 +131,35 @@ export const breadList = [
     'id': 'nutella',
     'name': 'Nutella',
     'price': 10500,
-    'description': '',
+    'description': 'Soft bread with nutella fillings.',
     'urls': './img/products/nutella.jpg',
   },
   {
     'id': 'chicken-floss',
     'name': 'Chicken Floss',
     'price': 10500,
-    'description': '',
+    'description': 'Soft bread with chicken floss toppings.',
     'urls': './img/products/chicken-floss.jpg',
   },
   {
     'id': 'donut-ceres',
     'name': 'Donut Ceres',
     'price': 10500,
-    'description': '',
+    'description': 'Tasty donut with mocca ceres topping. Everyone\'s Favorite.',
     'urls': './img/products/donut-ceres.jpg',
   },
   {
     'id': 'ogura',
     'name': 'Ogura',
     'price': 8500,
-    'description': '',
+    'description': 'Soft bread with red bean fillings.',
     'urls': './img/products/bread.jpg',
   },
   {
     'id': 'cheese',
     'name': 'Cheese',
     'price': 8500,
-    'description': '',
+    'description': 'Soft bread with cheese fillings.',
     'urls': './img/products/cheese.jpg',
   },
 ]

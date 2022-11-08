@@ -5,29 +5,61 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { TesterSchema } from '../validators/schema';
 import TextAreaInput from './Input/TextAreaInput';
+import { useState } from 'react';
 import Dropdown from './Input/Dropdown';
 
+import axios from 'axios';
+
 const TesterForm = () => {
-  const { register, handleSubmit, formState:{ errors } } = useForm({
-    resolver: yupResolver(TesterSchema)
+  const [isCake, setIsCake] = useState(true);
+  const { register, handleSubmit, formState:{ errors }, getValues } = useForm({
+    resolver: yupResolver(TesterSchema),
+    defaultValues: {
+      type: 'cake',
+    }
   });
 
   const handleTester = async data => {
-    try {
-      const response = await fetch(
-          "https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form",
-          {
-              method: "post",
-              body: JSON.stringify(data),
-              headers: {
-                "Content-Type": "application/json"
-              }
-          }
-      );
-      const json = await response.json();
-    } catch (error) {
-        console.log(error);
+    // axios.post({
+    //   method: 'post',
+    //   url: 'https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form', 
+    //   params: {},
+    //   data: ([[data.first_name, data.last_name, data.email, data.phone_number, data.type, data.flavours, data.address_line]])
+    // }).then(function (response) {
+    //   // handle success
+    //   console.log(response.data);
+    // }).catch(function (error) {
+    //   // handle error
+    //   console.log(error);
+    // })
+    const config = {
+      headers: {
+        'Accept' : "application/json",
+        'content-type': 'application/json',
+      }
     }
+
+    const params = {};
+
+    axios.post('https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form', [[data.first_name, data.last_name, data.email, data.phone_number, data.type, data.flavours, data.address_line]], params, config)
+    // try {
+    //   const response = await fetch(
+    //       "https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form",
+    //       {
+    //           method: "post",
+    //           data: JSON.stringify([[data.first_name, data.last_name, data.email, data.phone_number, data.type, data.flavours, data.address_line]]),
+    //           params: {},
+    //           headers: {
+    //             "Content-Type": "application/json"
+    //           }
+    //       }
+    //   );
+    //   const json = await response.json();
+    //   const { success } = await 
+      
+    // } catch (error) {
+    //     console.log(error);
+    // }
   }
 
   return (
@@ -37,7 +69,7 @@ const TesterForm = () => {
           <div className="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-6 sm:p-10 mt-10">
             <h2 className=" text-xl md:text-3xl lg:text-5xl font-bold mb-4">Fulfill Your Cravings!</h2>
             <p className="mb-8">
-              <span className="block text-lg font-bold italic">Hi There!</span> We are pleased to tell you that we will be launching our brand new online dessert shop on <strong><em>November 13th</em></strong>! <br />Hence, we will be sending free samples of our baked goods to all of you.<br /> Please write down your detail below and feel free to choose and taste our slice of happiness.
+              <span className="block text-lg font-bold italic">Hi There!</span> We are pleased to tell you that we will be launching our brand new online dessert shop on <strong><em>November 12th</em></strong>! <br />Hence, we will be sending free samples of our baked goods to all of you.<br /> Please write down your detail below and feel free to choose and taste our slice of happiness.
               <span className="block italic mt-2">(medan residences only and free of charges)</span>
             </p>
             <form className="grid sm:grid-cols-2 gap-2 gap-y-1 mx-auto w-full" onSubmit={handleSubmit(handleTester)} noValidate>
@@ -87,19 +119,21 @@ const TesterForm = () => {
                   register={register}
                   errors={errors}
                   required
+                  isSetCake={setIsCake}
                 />
               </div>
-              {/* <div className="block w-full col-span-full">
+              
+              <div className={`${isCake ? "block" : "hidden"} w-full col-span-full`}>
                 <p className="text-md font-bold">Pick your desired flavours! <span className="font-normal italic">(You can pick up to 2 flavours.)</span></p>
                 <div>
                   <label className="relative w-full inline-flex items-center" htmlFor="strawberry_bliss">
                     <input
                       type='checkbox'
-                      name='flavour.strawberry_bliss'
+                      name='flavours'
                       id="strawberry_bliss"
                       value='Strawberry Bliss'
                       placeholder='Strawberry Bliss'
-                      {...register('flavour.strawberry_bliss')}
+                      {...register('flavours')}
                       className="mr-3"
                     />
                     Strawberry Bliss
@@ -107,11 +141,11 @@ const TesterForm = () => {
                   <label className="relative w-full inline-flex items-center" htmlFor="milk_tea_chocolate">
                     <input
                       type='checkbox'
-                      name='flavour.milk_tea_chocolate'
+                      name='flavours'
                       id="milk_tea_chocolate"
                       value='Milk Tea Chocolate'
                       placeholder='Milk Tea Chocolate'
-                      {...register('flavour.milk_tea_chocolate')}
+                      {...register('flavours')}
                       className="mr-3"
                     />
                     Milk Tea Chocolate
@@ -119,11 +153,11 @@ const TesterForm = () => {
                   <label className="relative w-full inline-flex items-center" htmlFor="vanilla_creme_brulee">
                     <input
                       type='checkbox'
-                      name='flavour.vanilla_creme_brulee'
+                      name='flavours'
                       id="vanilla_creme_brulee"
                       value='Vanilla Creme Brulee'
                       placeholder='Vanilla Creme Brulee'
-                      {...register('flavour.vanilla_creme_brulee')}
+                      {...register('flavours')}
                       className="mr-3"
                     />
                     Vanilla Creme Brulee
@@ -131,11 +165,11 @@ const TesterForm = () => {
                   <label className="relative w-full inline-flex items-center" htmlFor="mango_tango">
                     <input
                       type='checkbox'
-                      name='flavour.mango_tango'
+                      name='flavours'
                       id="mango_tango"
                       value='Mango Tango'
                       placeholder='Mango Tango'
-                      {...register('flavour.mango_tango')}
+                      {...register('flavours')}
                       className="mr-3"
                     />
                     Mango Tango
@@ -143,17 +177,19 @@ const TesterForm = () => {
                   <label className="relative w-full inline-flex items-center" htmlFor="sunny_lemonade">
                     <input
                       type='checkbox'
-                      name='flavour.sunny_lemonade'
+                      name='flavours'
                       id="sunny_lemonade"
                       value='Sunny Lemonade'
                       placeholder='Sunny Lemonade'
-                      {...register('flavour.sunny_lemonade')}
+                      {...register('flavours')}
                       className="mr-3"
                     />
                     Sunny Lemonade
                   </label>
                 </div>
-              </div> */}
+                {errors["flavours"] && <p className="italic text-sm font-normal mb-5 mt-1">{errors['flavours'].message}</p>}
+              </div>
+              
               <div className="block w-full col-span-full">
                 <TextAreaInput
                   label={"Home Address"}

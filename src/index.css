@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Black.ttf") font-weight-black,
+       url("../public/fonts/Avenir/Avenir-BlackOblique.ttf") font-italic font-weight-black,
+       url("../public/fonts/Avenir/Avenir-Heavy.ttf") font-weight-bold,
+       url("../public/fonts/Avenir/Avenir-HeavyOblique.ttf") font-italic font-weight-bold,
+       url("../public/fonts/Avenir/Avenir-Medium.ttf") font-weight-medium,
+       url("../public/fonts/Avenir/Avenir-MediumOblique.ttf") font-italic font-weight-medium,
+       url("../public/fonts/Avenir/Avenir-Roman.ttf") font-weight-normal,
+       url("../public/fonts/Avenir/Avenir-Oblique.ttf") font-italic font-weight-normal,
+       url("../public/fonts/Avenir/Avenir-Light.ttf") font-weight-light,
+       url("../public/fonts/Avenir/Avenir-LightOblique.ttf") font-italic font-weight-light,
+}
+
+@font-face {
+  font-family: "Chalkboard";
+  src: url("../public/fonts/Chalkboard/Chalkboard.ttf") font-weight-normal,
+       url("../public/fonts/Chalkboard/Chalkboard-Bold.ttf") font-weight-bold;
+}
+
 html {
   @apply scroll-smooth box-border;
 }
