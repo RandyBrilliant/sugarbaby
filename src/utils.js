@@ -1,32 +1,32 @@
 export const faqList = [
   {
     id: "1",
-    question: "How is the baking process go?",
+    question: "Ingredients",
     answer: "We served only with finest ingredients, such as free range LCH Eggs, Natural Fresh Fruits, Tahitian Vanilla, New Zealand Butter, Japanese Flour, Callebaut, Cacao Barry, etc. All of our products are made without artificial preservatives.",
   },
   {
     id: "2",
-    question: "Does your product have allergy tolerance?",
+    question: "Allergy Intolerance",
     answer: "Please beware that our products may contain traces of eeg, dairy, nuts and soy. All of our products are HALAL (No Pork Contained), but some products may contain hints of alcohol as flavouring.",
   },
   {
     id: "3",
-    question: "How long will your product last?",
+    question: "Storage & Shelf Life",
     answer: "All products are freshly made everyday and have a short shelf life. Please store the products as recommended in the box tag. To get the best pleasure with Sugarbaby, we recommend you to consume it within the suggested shelf life (serve immediately).",
   },
   {
     id: "4",
-    question: "How to order the desserts?",
+    question: "How to Order",
     answer: "You can kindly contact us via our social media such as WhatsApp, Instagram or you can directly order it via our marketplaces such as GrabFood, GoFood and Tokopedia. Please note that some marketplace may charge differently from our official website due to the marketplace policy.",
   },
   {
     id: "5",
-    question: "Do you provide delivery or self-pickup?",
+    question: "Transportation & Pick-up",
     answer: "Yes, we provide delivery and self-pickup for Medan residences. Please kindly contact us and we will arrange it for you.",
   },
   {
     id: "6",
-    question: "Do you accept any custom order?",
+    question: "Custom Orders",
     answer: "Yes, We do accept custom orders in bulk for events and any other purposes. You can kindly contact us for further information.",
   },
 ]
@@ -79,7 +79,7 @@ export const cakeList = [
     'name': 'Vanilla Creme Brule',
     'full-price': 225000,
     'slice-price': 45000,
-    'description': '',
+    'description': 'Layers of moist vanilla cake with caramelized creme brulee fillings covered with silky vanilla frosting.',
     'urls': './img/products/vanilla-creme-brule.jpg',
   },
   {
@@ -87,7 +87,7 @@ export const cakeList = [
     'name': 'Milk Tea Chocolate',
     'full-price': 225000,
     'slice-price': 45000,
-    'description': '',
+    'description': 'Super rich and moist chocolate cake, with milk tea infused custard and whipped chocolate cream.',
     'urls': './img/products/chocolate-milk-tea.jpg',
   },
   {
@@ -95,7 +95,7 @@ export const cakeList = [
     'name': 'Mango Tango',
     'full-price': 235000,
     'slice-price': 50000,
-    'description': '',
+    'description': 'Soft layer of vanilla cake with mango juice infused cream and fresh sweet mangoes.',
     'urls': './img/products/mango-tango.jpg',
   },
   {
@@ -103,7 +103,7 @@ export const cakeList = [
     'name': 'Sunny Lemonade',
     'full-price': 225000,
     'slice-price': 45000,
-    'description': '',
+    'description': 'Lemon juice infused sponge cake, inside filled with lemon custard and cream pure from lemon juice!',
     'urls': './img/products/sunny-lemonade.jpg',
   },
   {
@@ -111,7 +111,7 @@ export const cakeList = [
     'name': 'Strawberry Bliss',
     'full-price': 235000,
     'slice-price': 50000,
-    'description': '',
+    'description': 'Fluffy vanilla sponge with creme diplomat fillings and full of fresh strawberries.',
     'urls': './img/products/strawberry-bliss.jpg',
   },
 ]
