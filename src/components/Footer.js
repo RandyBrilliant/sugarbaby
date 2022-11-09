@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/logo.svg';
-import { navigation, cakeList } from '../utils';
+import { navigation, cakeList, breadList } from '../utils';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <a href="/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img src={Logo} alt="Sugarbaby" className="h-20 object-cover object-center" />
           </a>
-          <p className="mt-5 text-sm text-gray-500">Serving you only heavenly sweetness. Let us fulfill your cravings with a dose of cute aegyo, because you are our ultimate sweet ones.</p>
+          <p className="mt-5 text-sm text-gray-500">Serving you only heavenly sweetness. Let us fulfill your cravings, because you are our ultimate sweet ones.</p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -47,40 +47,26 @@ const Footer = () => {
             <h2 className="font-bold uppercase text-lg mb-3">QUICHES</h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Ultimate Quiche Lorraine</a>
+                <Link to='/catalog/quiche' className="text-gray-900 hover:text-secondary text-sm">Ultimate Quiche Lorraine</Link>
               </li>
               <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Beef Quiche</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Chicken Quiche</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Triple Cheese Quiche</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Mushroom Quiche</a>
+                <Link to='/catalog/quiche' className="text-gray-900 hover:text-secondary text-sm">Triple Cheese Quiche</Link>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-bold uppercase text-lg mb-3">BREAD</h2>
             <nav className="list-none mb-10">
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Nutella</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Chicken Floss</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Donut Ceres</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Ogura</a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-900 hover:text-secondary text-sm">Cheese</a>
-              </li>
+              {breadList.map(item => (
+                <li>
+                  <Link 
+                    to={`/catalog/${item.id}`} 
+                    className="text-gray-900 hover:text-secondary text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </nav>
           </div>
         </div>

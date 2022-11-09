@@ -12,7 +12,9 @@ import axios from 'axios';
 
 const TesterForm = () => {
   const [isCake, setIsCake] = useState(true);
-  const { register, handleSubmit, formState:{ errors }, getValues } = useForm({
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { register, handleSubmit, formState:{ errors } } = useForm({
     resolver: yupResolver(TesterSchema),
     defaultValues: {
       type: 'cake',
@@ -20,46 +22,18 @@ const TesterForm = () => {
   });
 
   const handleTester = async data => {
-    // axios.post({
-    //   method: 'post',
-    //   url: 'https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form', 
-    //   params: {},
-    //   data: ([[data.first_name, data.last_name, data.email, data.phone_number, data.type, data.flavours, data.address_line]])
-    // }).then(function (response) {
-    //   // handle success
-    //   console.log(response.data);
-    // }).catch(function (error) {
-    //   // handle error
-    //   console.log(error);
-    // })
-    const config = {
-      headers: {
-        'Accept' : "application/json",
-        'content-type': 'application/json',
-      }
-    }
-
-    const params = {};
-
-    axios.post('https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form', [[data.first_name, data.last_name, data.email, data.phone_number, data.type, data.flavours, data.address_line]], params, config)
-    // try {
-    //   const response = await fetch(
-    //       "https://v1.nocodeapi.com/randybrilliant/google_sheets/gyoziXYfxWVCRcTL?tabId=Form",
-    //       {
-    //           method: "post",
-    //           data: JSON.stringify([[data.first_name, data.last_name, data.email, data.phone_number, data.type, data.flavours, data.address_line]]),
-    //           params: {},
-    //           headers: {
-    //             "Content-Type": "application/json"
-    //           }
-    //       }
-    //   );
-    //   const json = await response.json();
-    //   const { success } = await 
-      
-    // } catch (error) {
-    //     console.log(error);
-    // }
+    setLoading(true);
+    setMessage("");
+    console.log(data);
+    axios.post('https://sheet.best/api/sheets/51eb3736-e5f9-4c46-a538-c2fcfe78935f', data)
+    .then(response => {
+      if (response.status === 200) {
+        setMessage("Thank you for your response, we will get in touch with you shortly...");
+      } else {
+        setMessage("Please try again later");
+      };
+      setLoading(false);
+    })
   }
 
   return (
@@ -200,14 +174,15 @@ const TesterForm = () => {
                 />
               </div>
               <div className="sm:col-span-2 text-center sm:text-left">
-                <button className="w-full lg:w-auto px-6 py-3 lg:px-10 lg:py-4 relative rounded-full group font-medium text-white inline-block" type="submit">
+                <button className="w-full lg:w-auto px-6 py-3 lg:px-10 lg:py-4 relative rounded-full group font-medium text-white inline-block" type="submit" disabled={loading} aria-disabled={loading}>
                   <span className="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-secondary to-primary"></span>
                   <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded-full opacity-50 from-secondary to-primary"></span>
                   <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-secondary to-primary"></span>
                   <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primary from-secondary"></span>
-                  <span className=" relative text-sm font-extrabold">Send Form</span>
+                  {loading ? <div class="relative loader ease-linear rounded-full border-4 border-t-4 border-primary h-6 w-6 mx-auto"></div> : <span className=" relative text-sm font-extrabold">Send Form</span>}
                 </button>
               </div>
+              {message && <p className="italic text-sm font-normal mb-5 mt-1">{message}</p>}
             </form>
             <p className="text-primary text-sm italic mt-10">By sending your data, you agree to our <a href="/" class="hover:text-white active:text-tertiary underline transition duration-100">Privacy Policy</a>.</p>
           </div>

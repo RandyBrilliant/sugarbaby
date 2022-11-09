@@ -29,7 +29,8 @@ export const TesterSchema = yup.object({
   email: yup.string().email("Please enter appropriate format of email address").required('Please enter your email address').required('Please enter your email address').max(255, 'You can have maximum characters of 255!'),
   phone_number : yup.string().required('Please enter your Phone Number').max(15, 'You can have maximum characters of 15!'),
   type : yup.string().required("Please choose the flavour!"),
-  flavours: yup.array().max(2, 'You can only select up to 2 flavours!').optional(),
+  flavours: yup.array().optional(),
   address_line : yup.string().required("Please enter your Home Address"),
 });
 
+// .max(2, 'You can only select up to 2 flavours!')
