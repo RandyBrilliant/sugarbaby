@@ -1,52 +1,53 @@
-import BannerImage from '../assets/img/banner.jpg'
+import { Helmet } from 'react-helmet';
+
+import BannerPicture from '../assets/img/banner.jpg';
+import ProfilePicture from '../assets/img/profile-picture.jpg';
+import VideoProfile from '../assets/img/sugarbaby01.mp4';
+import ReactPlayer from 'react-player/lazy';
 
 const About = () => {
   return (
-    <section id="about-us" className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 mt-10">
-        <div>
-          <h3 className="inline-block px-5 py-2 mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-secondary">
-            Sugarbaby.mdn
-          </h3>
+    <>
+      <Helmet>
+        <title>About Us | Sugarbaby</title>
+        <meta name="description" content="Sugarbaby was founded in 2022, where the purpose is to serve freshly-made dessert for everyone to enjoy in the midst of their activities. We used only the finest and fresh ingredients, with no artifical flavourings and preservatives added. Our product also considered Halal (No Pork Contained)." />
+      </Helmet>
+      <section id="about-us" className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 mt-10">
+          <div>
+            <h3 className="inline-block px-5 py-2 mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-secondary">
+              Sugarbaby
+            </h3>
+          </div>
+          <h1 className="uppercase max-w-lg mb-3 text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
+            About Us
+          </h1>
+          <h2 className="text-md text-bold italic text-gray-700 md:text-lg mb-6">
+            The story behind the creation of Sugarbaby to serve you with a slice of happiness.
+          </h2>
+          <p className="text-base mb-6"> 
+            Sugarbaby was founded in 2022, where the purpose is to serve freshly-made dessert for everyone to enjoy in the midst of their activities. We used only the finest and fresh ingredients, with no artifical flavourings and preservatives added. Our product also considered Halal (No Pork Contained).
+          </p>
+          <figure className="mb-6 text-center">
+            <img
+              className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96 transition-shadow duration-300 hover:shadow-xl"
+              src={ProfilePicture}
+              alt="Catherine Pho"
+            />
+            <figcaption className="font-serif font-bold mt-5 text-xl leading-none"><span className="block font-sans font-light uppercase tracking-wide mb-3 text-sm">MEET OUR CHEF</span>Catherine Pho</figcaption>
+            <span className="font-normal italic text-sm leading-none">The Founder and Pastry Chef</span>
+          </figure>
+          <p className="text-base mt-5">
+            Catherine Pho has pursued her passion in pastry industry where firstly she had founded Rose Gold Bake, a custom-made cake specially made for customers to celebrate their happy occasions. All of the curiosity from her has come towards her passion. She knew that by creating the best pastries will bring happiness to people. Catherine has also been certified as Pastry Chef.
+          </p>
         </div>
-        <h1 className="uppercase max-w-lg mb-3 text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
-          About Us
-        </h1>
-        <h2 className="text-md text-bold italic text-gray-700 md:text-lg mb-6">
-          The story behind the creation of Sugarbaby to serve you with a slice of happiness.
-        </h2>
-        <p className="text-base"> 
-          Sugarbaby was founded in 2022, where the purpose is to serve freshly-made dessert for everyone to enjoy in the midst of their activities. We used only the finest and fresh ingredients, with no artifical flavourings and preservatives added. Our product also considered Halal (No Pork Contained).
-        </p>
-        <p className="text-base mt-5">
-          Catherine Pho has pursued her passion in pastry industry since graduating from high school and studied at a lot of pastry courses outside Medan. She had founded Rose Gold Bake, a custom made cake specially made only for customers to celebrate their occasions. All of the curiosity from her has come towards passion. She knew that by creating the best pastries will bring happiness to people.
-        </p>
-      </div>
-      <div className="mx-auto lg:max-w-2xl">
-        <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
-          <img
-            className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96"
-            src={BannerImage}
-            alt="Catherine Pho"
-          />
-          <a
-            href="/"
-            aria-label="Play Video"
-            className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
-          >
-            <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-              <svg
-                className="w-10 text-gray-900"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
-              </svg>
-            </div>
-          </a>
+        <div className="mx-auto lg:max-w-2xl mt-20">
+          <div className="relative w-full transition-shadow duration-300 hover:shadow-xl overflow-hidden">
+            <ReactPlayer url={VideoProfile} controls light={BannerPicture} width={"100%"} />
+          </div>
         </div>
-      </div>
-  </section>
+      </section>
+    </>
   )
 }
 

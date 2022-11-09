@@ -1,5 +1,4 @@
 import Mascot from '../assets/img/logo/mascot.png';
-import { PrimaryButton } from '../components/Button';
 import { Link } from 'react-router-dom';
 
 const Error = () => {

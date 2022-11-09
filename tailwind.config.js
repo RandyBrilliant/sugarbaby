@@ -21,6 +21,10 @@ module.exports = {
         'sans': ['Avenir', ...defaultTheme.fontFamily.sans],
         'serif': ['Chalkboard', ...defaultTheme.fontFamily.serif],
       },
+      backgroundImage: {
+        'hero-pattern': "url('../src/assets/img/tester.jpg')",
+      }
+
     }
   },
   plugins: [],

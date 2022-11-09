@@ -43,7 +43,7 @@ const TesterForm = () => {
     if (isReset) {
       reset();
     }
-  }, [isReset])
+  }, [isReset, reset])
 
   return (
     <section className="bg-white py-6 sm:py-8 lg:py-12" id="tester-form">
@@ -199,7 +199,7 @@ const TesterForm = () => {
               </div>
               {message && <p className="italic text-sm font-normal mb-5 mt-1">{message}</p>}
             </form>
-            <p className="text-primary text-sm italic mt-10">By sending your data, you agree to our <a href="/" class="hover:text-white active:text-tertiary underline transition duration-100">Privacy Policy</a>.</p>
+            <p className="text-primary text-sm italic mt-10">By sending your data, you agree to our <a href="/" className="hover:text-white active:text-tertiary underline transition duration-100">Privacy Policy</a>.</p>
           </div>
           <div className="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-full rounded-tl-lg order-first sm:order-none bg-gray-700 sm:rounded-tl-none rounded-tr-lg rounded-br-lg overflow-hidden">
             <img src={Image} loading="lazy" alt="Sugarbaby Tester Form" className="w-full h-full object-cover object-center" />
