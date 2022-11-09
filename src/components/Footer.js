@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/logo.svg';
-import { navigation, cakeList, breadList } from '../utils';
+import { navigation, productList } from '../utils';
 
 const Footer = () => {
   return (
@@ -17,13 +17,13 @@ const Footer = () => {
             <h2 className="font-bold uppercase text-lg mb-3">NAVIGATION</h2>
             <nav className="list-none mb-10">
               {navigation.map(item => (
-                <li>
-                  <a 
-                    href={item.href} 
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
                     className="text-gray-900 hover:text-secondary text-sm"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </nav>
@@ -31,8 +31,8 @@ const Footer = () => {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-bold uppercase text-lg mb-3">SLICE CAKE</h2>
             <nav className="list-none mb-10">
-              {cakeList.map(item => (
-                <li>
+              {productList.filter(item => item.type === "cake").map(item => (
+                <li key={item.id}>
                   <Link 
                     to={`/catalog/${item.id}`} 
                     className="text-gray-900 hover:text-secondary text-sm"
@@ -46,19 +46,23 @@ const Footer = () => {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-bold uppercase text-lg mb-3">QUICHES</h2>
             <nav className="list-none mb-10">
-              <li>
-                <Link to='/catalog/quiche' className="text-gray-900 hover:text-secondary text-sm">Ultimate Quiche Lorraine</Link>
-              </li>
-              <li>
-                <Link to='/catalog/quiche' className="text-gray-900 hover:text-secondary text-sm">Triple Cheese Quiche</Link>
-              </li>
+              {productList.filter(item => item.type === "quiche").map(item => (
+                <li key={item.id}>
+                  <Link 
+                    to={`/catalog/${item.id}`} 
+                    className="text-gray-900 hover:text-secondary text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-bold uppercase text-lg mb-3">BREAD</h2>
             <nav className="list-none mb-10">
-              {breadList.map(item => (
-                <li>
+              {productList.filter(item => item.type === "bread").map(item => (
+                <li key={item.id}>
                   <Link 
                     to={`/catalog/${item.id}`} 
                     className="text-gray-900 hover:text-secondary text-sm"

@@ -5,30 +5,33 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { TesterSchema } from '../validators/schema';
 import TextAreaInput from './Input/TextAreaInput';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Dropdown from './Input/Dropdown';
 
 import axios from 'axios';
 
 const TesterForm = () => {
   const [isCake, setIsCake] = useState(true);
+  const [isReset, setIsReset] = useState(false);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const { register, handleSubmit, formState:{ errors } } = useForm({
+  const { register, handleSubmit, formState:{ errors }, reset } = useForm({
     resolver: yupResolver(TesterSchema),
     defaultValues: {
       type: 'cake',
+      flavours: [],
     }
   });
 
   const handleTester = async data => {
+    setIsReset(false);
     setLoading(true);
     setMessage("");
-    console.log(data);
     axios.post('https://sheet.best/api/sheets/51eb3736-e5f9-4c46-a538-c2fcfe78935f', data)
     .then(response => {
       if (response.status === 200) {
         setMessage("Thank you for your response, we will get in touch with you shortly...");
+        setIsReset(true);
       } else {
         setMessage("Please try again later");
       };
@@ -36,11 +39,17 @@ const TesterForm = () => {
     })
   }
 
+  useEffect(() => {
+    if (isReset) {
+      reset();
+    }
+  }, [isReset])
+
   return (
     <section className="bg-white py-6 sm:py-8 lg:py-12" id="tester-form">
       <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
         <div className="text-white flex flex-col sm:flex-row bg-secondary rounded-lg">
-          <div className="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-6 sm:p-10 mt-10">
+          <div className="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-6 sm:p-10 mt-5">
             <h2 className=" text-xl md:text-3xl lg:text-5xl font-bold mb-4">Fulfill Your Cravings!</h2>
             <p className="mb-8">
               <span className="block text-lg font-bold italic">Hi There!</span> We are pleased to tell you that we will be launching our brand new online dessert shop on <strong><em>November 12th</em></strong>! <br />Hence, we will be sending free samples of our baked goods to all of you.<br /> Please write down your detail below and feel free to choose and taste our slice of happiness.
@@ -64,28 +73,24 @@ const TesterForm = () => {
                 register={register}
                 errors={errors}
               />
-              <div className="block w-full col-span-full">
-                <TextInput
-                  label={"Email Address"}
-                  name={'email'}
-                  placeholder={'Enter your Email Address'}
-                  type={"email"}
-                  required
-                  register={register}
-                  errors={errors}
-                />
-              </div>
-              <div className="block w-full col-span-full">
-                <TextInput
-                  label={"Phone Number"}
-                  name={'phone_number'}
-                  placeholder={'Enter your Phone Number'}
-                  type={"text"}
-                  required
-                  register={register}
-                  errors={errors}
-                />
-              </div>
+              <TextInput
+                label={"Email Address"}
+                name={'email'}
+                placeholder={'Enter your Email Address'}
+                type={"email"}
+                required
+                register={register}
+                errors={errors}
+              />
+              <TextInput
+                label={"Phone Number"}
+                name={'phone_number'}
+                placeholder={'Enter your Phone Number'}
+                type={"text"}
+                required
+                register={register}
+                errors={errors}
+              />
               <div className="block w-full col-span-full">
                 <Dropdown
                   label={"Choose your favorites!"}
@@ -163,11 +168,21 @@ const TesterForm = () => {
                 </div>
                 {errors["flavours"] && <p className="italic text-sm font-normal mb-5 mt-1">{errors['flavours'].message}</p>}
               </div>
-              
               <div className="block w-full col-span-full">
                 <TextAreaInput
                   label={"Home Address"}
                   name={'address_line'}
+                  required
+                  register={register}
+                  errors={errors}
+                />
+              </div>
+              <div className="block w-full col-span-full">
+                <TextInput
+                  label={"Preferred Delivery Time"}
+                  name={'preferred_delivery_time'}
+                  placeholder={'Enter your preferred delivery time (e.g. 07.00 WIB)'}
+                  type={"text"}
                   required
                   register={register}
                   errors={errors}
@@ -179,15 +194,15 @@ const TesterForm = () => {
                   <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded-full opacity-50 from-secondary to-primary"></span>
                   <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-secondary to-primary"></span>
                   <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primary from-secondary"></span>
-                  {loading ? <div class="relative loader ease-linear rounded-full border-4 border-t-4 border-primary h-6 w-6 mx-auto"></div> : <span className=" relative text-sm font-extrabold">Send Form</span>}
+                  {loading ? <div className="relative loader ease-linear rounded-full border-4 border-t-4 border-primary h-6 w-6 mx-auto"></div> : <span className=" relative text-sm font-extrabold">Send Form</span>}
                 </button>
               </div>
               {message && <p className="italic text-sm font-normal mb-5 mt-1">{message}</p>}
             </form>
             <p className="text-primary text-sm italic mt-10">By sending your data, you agree to our <a href="/" class="hover:text-white active:text-tertiary underline transition duration-100">Privacy Policy</a>.</p>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-full order-first sm:order-none bg-gray-700 rounded-tr-lg rounded-br-lg overflow-hidden">
-            <img src={Image} loading="lazy" alt="Dom Hill" className="w-full h-full object-cover object-center" />
+          <div className="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-full rounded-tl-lg order-first sm:order-none bg-gray-700 sm:rounded-tl-none rounded-tr-lg rounded-br-lg overflow-hidden">
+            <img src={Image} loading="lazy" alt="Sugarbaby Tester Form" className="w-full h-full object-cover object-center" />
           </div>
         </div>
       </div>

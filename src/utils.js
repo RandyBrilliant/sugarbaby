@@ -73,13 +73,32 @@ export const merchantList = [
   },
 ]
 
-export const cakeList = [
+export const carouselList = [
+  {
+    id: "1",
+    alt: "Milk tea chocolate",
+    urls: "./img/carousel/milk-tea-chocolate.jpeg",
+  },
+  {
+    id: "2",
+    alt: "Mango tango",
+    urls: "./img/carousel/mango-tango.jpeg",
+  },
+  {
+    id: "3",
+    alt: "Sunny lemonade",
+    urls: "./img/carousel/sunny-lemonade.jpeg",
+  },
+]
+
+export const productList = [
   {
     'id': 'vanilla-creme-brule',
     'name': 'Vanilla Crème Brûlée',
     'full-price': 225000,
     'slice-price': 45000,
     'description': 'Layers of moist vanilla cake with caramelized crème brûlée fillings covered with silky vanilla frosting.',
+    'type': 'cake',
     'urls': './img/products/vanilla-creme-brule.jpg',
   },
   {
@@ -88,6 +107,7 @@ export const cakeList = [
     'full-price': 225000,
     'slice-price': 45000,
     'description': 'Super rich and moist chocolate cake, with milk tea infused custard and whipped chocolate cream.',
+    'type': 'cake',
     'urls': './img/products/chocolate-milk-tea.jpg',
   },
   {
@@ -96,6 +116,7 @@ export const cakeList = [
     'full-price': 235000,
     'slice-price': 50000,
     'description': 'Soft layer of vanilla cake with mango juice infused cream and fresh sweet mangoes.',
+    'type': 'cake',
     'urls': './img/products/mango-tango.jpg',
   },
   {
@@ -104,6 +125,7 @@ export const cakeList = [
     'full-price': 225000,
     'slice-price': 45000,
     'description': 'Lemon juice infused sponge cake, inside filled with lemon custard and cream pure from lemon juice!',
+    'type': 'cake',
     'urls': './img/products/sunny-lemonade.jpg',
   },
   {
@@ -112,54 +134,70 @@ export const cakeList = [
     'full-price': 235000,
     'slice-price': 50000,
     'description': 'Fluffy vanilla sponge with creme diplomat fillings and full of fresh strawberries.',
+    'type': 'cake',
     'urls': './img/products/strawberry-bliss.jpg',
   },
-]
-
-export const quicheList = {
-  'id': 'ultimate-quiche-lorraine',
-  'name': 'Ultimate Quiche Lorraine',
-  'full-price': 225000,
-  'slice-price': 45000,
-  'description': 'Savory egg pie with your choices of flavour.',
-  'urls': './img/products/quiche.jpg',
-  'flavours': ['beef', 'chicken', 'triple cheese', 'mushroom']
-}
-
-export const breadList = [
+  {
+    'id': 'ultimate-quiche-lorraine',
+    'name': 'Ultimate Quiche Lorraine',
+    'full-price': 225000,
+    'slice-price': 45000,
+    'description': 'Savory egg pie with your choices of flavour.',
+    'type': 'quiche',
+    'urls': './img/products/quiche.jpg',
+  },
+  {
+    'id': 'triple-cheese-quiche',
+    'name': 'Triple Cheese Quiche',
+    'full-price': 225000,
+    'slice-price': 45000,
+    'description': 'Savory egg pie with your choices of flavour.',
+    'type': 'quiche',
+    'urls': './img/products/quiche.jpg',
+  },
   {
     'id': 'nutella',
     'name': 'Nutella',
-    'price': 10500,
+    'full-price': 10500,
+    'slice-price': 0,
     'description': 'Soft bread with nutella fillings.',
+    'type': 'bread',
     'urls': './img/products/nutella.jpg',
   },
   {
     'id': 'chicken-floss',
     'name': 'Chicken Floss',
-    'price': 10500,
+    'full-price': 10500,
+    'slice-price': 0,
     'description': 'Soft bread with chicken floss toppings.',
-    'urls': './img/products/chicken-floss.jpg',
+    'type': 'bread',
+    'urls': './img/products/chicken-floss.jpg', 
   },
   {
     'id': 'donut-ceres',
     'name': 'Donut Ceres',
-    'price': 10500,
+    'full-price': 10500,
+    'slice-price': 0,
     'description': 'Tasty donut with mocca ceres topping. Everyone\'s Favorite.',
+    'type': 'bread',
     'urls': './img/products/donut-ceres.jpg',
   },
   {
     'id': 'ogura',
     'name': 'Ogura',
-    'price': 8500,
+    'full-price': 8500,
+    'slice-price': 0,
     'description': 'Soft bread with red bean fillings.',
+    'type': 'bread',
     'urls': './img/products/bread.jpg',
   },
   {
     'id': 'cheese',
     'name': 'Cheese',
-    'price': 8500,
+    'full-price': 8500,
+    'slice-price': 0,
     'description': 'Soft bread with cheese fillings.',
+    'type': 'bread',
     'urls': './img/products/cheese.jpg',
   },
 ]

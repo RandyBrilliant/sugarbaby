@@ -1,11 +1,11 @@
-import { cakeList } from "../utils";
+import { productList } from "../utils";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
     <section id="menu" className="px-4 sm:px-6 lg:px-20 lg:mt-20 mt-10">
       <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 w-full mt-6">
-        {cakeList.map(cake => (
+        {productList.filter(item => item.type === "cake").map(cake => (
           <section key={cake.id}>
             <Link to={`catalog/${cake.id}`} className="block h-auto rounded-lg shadow-lg bg-white overflow-hidden group">
               <img src={cake.urls} alt={cake.id} className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300" />

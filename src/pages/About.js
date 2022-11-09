@@ -15,11 +15,11 @@ const About = () => {
         <h2 className="text-md text-bold italic text-gray-700 md:text-lg mb-6">
           The story behind the creation of Sugarbaby to serve you with a slice of happiness.
         </h2>
-        <p className="text-base">
-          Sugarbaby was founded in 2022, where the purpose of the owner and the chef, Catherine Pho wants to provide a ready-made cake for customers to enjoy in the midst of their activities. Sugarbaby used only the pure and finest ingredients, with no artificial flavourings and preservatives added. Our product also considered Halal (No Pork Contained). 
+        <p className="text-base"> 
+          Sugarbaby was founded in 2022, where the purpose is to serve freshly-made dessert for everyone to enjoy in the midst of their activities. We used only the finest and fresh ingredients, with no artifical flavourings and preservatives added. Our product also considered Halal (No Pork Contained).
         </p>
         <p className="text-base mt-5">
-          Catherine Pho has pursued her passion in pastry industry where firstly she had founded Rose Gold Bake, a custom made cake specially made only for customers to celebrate their happy occasions. All of the curiosity from her has come towards passion. She knew that by creating the best pastries will bring happiness to people.
+          Catherine Pho has pursued her passion in pastry industry since graduating from high school and studied at a lot of pastry courses outside Medan. She had founded Rose Gold Bake, a custom made cake specially made only for customers to celebrate their occasions. All of the curiosity from her has come towards passion. She knew that by creating the best pastries will bring happiness to people.
         </p>
       </div>
       <div className="mx-auto lg:max-w-2xl">
