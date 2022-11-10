@@ -15,7 +15,7 @@ const About = () => {
       <section id="about-us" className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 mt-10">
           <div>
-            <h3 className="inline-block px-5 py-2 mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-secondary">
+            <h3 className="inline-block px-5 py-2 mb-4 text-xs font-black tracking-wider text-white uppercase rounded-full bg-secondary">
               Sugarbaby
             </h3>
           </div>

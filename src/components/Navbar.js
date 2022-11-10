@@ -7,7 +7,7 @@ import Logo from '../assets/img/logo.svg';
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-transparent absolute w-full lg:w-auto z-50">
+    <Disclosure as="nav" className="bg-transparent absolute w-full lg:w-auto z-50 font-sans">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-5 lg:px-20 py-1 lg:py-2">
@@ -56,7 +56,7 @@ export default function Navbar() {
                         end
                         key={item.name}
                         to={item.href}
-                        className={({ isActive }) => "px-3 py-2 text-md font-bold " + (isActive ? "text-secondary" : "text-gray-400 hover:text-primary")}
+                        className={({ isActive }) => "px-3 py-2 text-md font-black" + (isActive ? "text-secondary" : "text-gray-400 hover:text-primary")}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -83,7 +83,7 @@ export default function Navbar() {
                     key={item.name}
                     as={NavLink}
                     to={item.href}
-                    className={({ isActive }) => "block py-2 text-base font-bold uppercase " + (isActive ? "text-secondary" : "text-gray-400 hover:text-primary")}
+                    className={({ isActive }) => "block py-2 text-base font-black uppercase " + (isActive ? "text-secondary" : "text-gray-400 hover:text-primary")}
                     aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}

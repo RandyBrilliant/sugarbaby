@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-BlackOblique.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Heavy.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-HeavyOblique.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-MediumOblique.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Oblique.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fonts/Avenir/Avenir-LightOblique.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}

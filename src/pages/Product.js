@@ -56,8 +56,8 @@ const Product = () => {
                 </svg>
                 <span className="text-sm">Delivery Available</span>
               </div>
-              <div className="mt-10 md:mt-16 lg:mt-20">
-                <div className="text-gray-800 text-lg font-semibold mb-3">Description</div>
+              <div className="mt-5 md:mt-7 lg:mt-10">
+                <div className="text-gray-800 text-lg font-semibold mb-1">Description</div>
                 <p className="text-gray-500">
                   {product?.description}
                 </p>

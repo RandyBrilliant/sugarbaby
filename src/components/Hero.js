@@ -14,14 +14,14 @@ const Hero = () => {
   return (
     <section className="flex flex-col-reverse lg:flex-row bg-white h-screen max-h-screen overflow-hidden" id="home">
       <div className="w-full h-full flex flex-col justify-end lg:justify-center text-center lg:text-left px-4 sm:px-6 lg:px-20 lg:w-1/2 pb-5 lg:pb-0 z-20">
-        <h1 className="font-extrabold text-gray-900 text-4xl lg:text-7xl lg:leading-snug"><span className="text-secondary">Happiness</span> Always <br />Taste Heavenly.</h1>
+        <h1 className=" font-black text-gray-900 text-4xl lg:text-7xl lg:leading-tight"><span className="text-secondary">Happiness</span> Always <br />Taste Heavenly.</h1>
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start mt-6 uppercase w-full gap-2 lg:gap-4">
           <PrimaryButton href="#catalog" content={"Explore Menu"} />
           <SecondaryButton href="#tester-form" content={"Order Now"} />
         </div>
         <section className="hidden lg:block absolute left-20 bottom-10">
-          <h4 className="uppercase font-extrabold mb-3 text-md">Available on</h4>
-          <div className="flex items-center gap-7">
+          <h4 className="uppercase font-black italic mb-3 text-md">Available on</h4>
+          <div className="flex items-center gap-5">
             {merchantList.map(merchant => (
               <img src={merchant.urls} alt={merchant.title} key={merchant.id} className="h-8 w-auto" />
             ))}
