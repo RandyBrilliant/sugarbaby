@@ -8,7 +8,7 @@ const Menu = () => {
         {productList.filter(item => item.type === "cake").map(cake => (
           <section key={cake.id}>
             <Link to={`catalog/${cake.id}`} className="block h-auto rounded-lg shadow-lg bg-white overflow-hidden group">
-              <img src={cake.urls} alt={cake.id} className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300" />
+              <img src={cake.urls[0]} alt={cake.id} className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300" />
             </Link>
             <Link to={`catalog/${cake.id}`} className="block text-center mt-3">
               <h4 className="font-bold text-lg mb-3">{cake.name}</h4>

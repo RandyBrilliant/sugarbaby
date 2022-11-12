@@ -23,14 +23,14 @@ const Product = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <div className="bg-gray-100 rounded-lg overflow-hidden relative">
-                <img src={`../${product?.urls}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
+                <img src={`../${product?.urls[0]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  <img src={`../${product?.urls}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
+                  <img src={`../${product?.urls[1]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
                 </div>
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  <img src={`../${product?.urls}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
+                  <img src={`../${product?.urls[2]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
                 </div>
               </div>
             </div>

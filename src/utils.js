@@ -99,7 +99,11 @@ export const productList = [
     'slice-price': 45000,
     'description': 'Layers of moist vanilla cake with caramelized crème brûlée fillings covered with silky vanilla frosting.',
     'type': 'cake',
-    'urls': './img/products/vanilla-creme-brule.jpg',
+    'urls': [
+      './img/products/vanilla-creme-brule/1.jpg',
+      './img/products/vanilla-creme-brule/2.jpg',
+      './img/products/vanilla-creme-brule/3.jpg',
+    ]
   },
   {
     'id': 'milk-tea-chocolate',
@@ -108,7 +112,11 @@ export const productList = [
     'slice-price': 45000,
     'description': 'Super rich and moist chocolate cake, with milk tea infused custard and whipped chocolate cream.',
     'type': 'cake',
-    'urls': './img/products/chocolate-milk-tea.jpg',
+    'urls': [
+      './img/products/chocolate-milk-tea/1.jpg',
+      './img/products/chocolate-milk-tea/2.jpg',
+      './img/products/chocolate-milk-tea/3.jpg',
+    ]
   },
   {
     'id': 'mango-tango',
@@ -117,7 +125,11 @@ export const productList = [
     'slice-price': 50000,
     'description': 'Soft layer of vanilla cake with mango juice infused cream and fresh sweet mangoes.',
     'type': 'cake',
-    'urls': './img/products/mango-tango.jpg',
+    'urls': [
+      './img/products/mango-tango/1.jpg',
+      './img/products/mango-tango/2.jpg',
+      './img/products/mango-tango/3.jpg',
+    ]
   },
   {
     'id': 'sunny-lemonade',
@@ -126,7 +138,11 @@ export const productList = [
     'slice-price': 45000,
     'description': 'Lemon juice infused sponge cake, inside filled with lemon custard and cream pure from lemon juice!',
     'type': 'cake',
-    'urls': './img/products/sunny-lemonade.jpg',
+    'urls': [
+      './img/products/sunny-lemonade/1.jpg',
+      './img/products/sunny-lemonade/2.jpg',
+      './img/products/sunny-lemonade/3.jpg',
+    ]
   },
   {
     'id': 'strawberry-bliss',
@@ -135,25 +151,25 @@ export const productList = [
     'slice-price': 50000,
     'description': 'Fluffy vanilla sponge with creme diplomat fillings and full of fresh strawberries.',
     'type': 'cake',
-    'urls': './img/products/strawberry-bliss.jpg',
+    'urls': [
+      './img/products/strawberry-bliss/1.jpg',
+      './img/products/strawberry-bliss/2.jpg',
+      './img/products/strawberry-bliss/3.jpg',
+    ]
   },
   {
     'id': 'ultimate-quiche-lorraine',
     'name': 'Ultimate Quiche Lorraine',
-    'full-price': 225000,
-    'slice-price': 45000,
+    'full-price': 200000,
+    'slice-price': 35000,
     'description': 'Savory egg pie with your choices of flavour.',
     'type': 'quiche',
-    'urls': './img/products/quiche.jpg',
-  },
-  {
-    'id': 'triple-cheese-quiche',
-    'name': 'Triple Cheese Quiche',
-    'full-price': 225000,
-    'slice-price': 45000,
-    'description': 'Savory egg pie with your choices of flavour.',
-    'type': 'quiche',
-    'urls': './img/products/quiche.jpg',
+    'urls': [
+      './img/products/quiche/1.jpg',
+      './img/products/quiche/2.jpg',
+      './img/products/quiche/3.jpg',
+      './img/products/quiche/4.jpg',
+    ]
   },
   {
     'id': 'nutella',
@@ -162,7 +178,11 @@ export const productList = [
     'slice-price': 0,
     'description': 'Soft bread with nutella fillings.',
     'type': 'bread',
-    'urls': './img/products/nutella.jpg',
+    'urls': [
+      './img/products/nutella/1.jpg',
+      './img/products/nutella/2.jpg',
+      './img/products/nutella/3.jpg',
+    ]
   },
   {
     'id': 'chicken-floss',
@@ -171,7 +191,11 @@ export const productList = [
     'slice-price': 0,
     'description': 'Soft bread with chicken floss toppings.',
     'type': 'bread',
-    'urls': './img/products/chicken-floss.jpg', 
+    'urls': [
+      './img/products/chicken-floss/1.jpg', 
+      './img/products/chicken-floss/2.jpg', 
+      './img/products/chicken-floss/3.jpg', 
+    ]
   },
   {
     'id': 'donut-ceres',
@@ -180,7 +204,11 @@ export const productList = [
     'slice-price': 0,
     'description': 'Tasty donut with mocca ceres topping. Everyone\'s Favorite.',
     'type': 'bread',
-    'urls': './img/products/donut-ceres.jpg',
+    'urls': [
+      './img/products/donut-ceres/1.jpg',
+      './img/products/donut-ceres/2.jpg',
+      './img/products/donut-ceres/3.jpg',
+    ]
   },
   {
     'id': 'ogura',
@@ -189,7 +217,11 @@ export const productList = [
     'slice-price': 0,
     'description': 'Soft bread with red bean fillings.',
     'type': 'bread',
-    'urls': './img/products/bread.jpg',
+    'urls': [
+      './img/products/bread/1.jpg',
+      './img/products/bread/2.jpg',
+      './img/products/bread/3.jpg',
+    ]
   },
   {
     'id': 'cheese',
@@ -198,7 +230,11 @@ export const productList = [
     'slice-price': 0,
     'description': 'Soft bread with cheese fillings.',
     'type': 'bread',
-    'urls': './img/products/cheese.jpg',
+    'urls': [
+      './img/products/cheese/1.jpg',
+      './img/products/cheese/2.jpg',
+      './img/products/cheese/3.jpg',
+    ]
   },
 ]
 
@@ -208,3 +244,13 @@ export const navigation = [
   { name: 'Catalog', href: 'catalog', current: false },
   { name: 'F.A.Q.', href: 'faq', current: false },
 ]
+
+  // {
+  //   'id': 'triple-cheese-quiche',
+  //   'name': 'Triple Cheese Quiche',
+  //   'full-price': 225000,
+  //   'slice-price': 45000,
+  //   'description': 'Savory egg pie with your choices of flavour.',
+  //   'type': 'quiche',
+  //   'urls': './img/products/quiche.jpg',
+  // },
