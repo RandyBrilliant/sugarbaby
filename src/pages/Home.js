@@ -4,7 +4,7 @@ import Catalog from '../components/Catalog';
 import Features from '../components/Features';
 import Menu from '../components/Menu';
 import Hero from '../components/Hero';
-import TesterForm from '../components/TesterForm';
+import Newsletter from "../components/Newsletter";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       </Helmet>
       <Hero />
       <Features />
-      <TesterForm />
+      <Newsletter />
       <Catalog />
       <Menu />
     </>

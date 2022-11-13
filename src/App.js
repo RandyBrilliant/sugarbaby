@@ -32,7 +32,7 @@ const App = () => {
       </main>
       <Footer />
       <FloatingWhatsApp
-        phoneNumber="6285186101131"
+        phoneNumber="628116541131"
         accountName="Sugarbaby"
         allowEsc
         allowClickAway
