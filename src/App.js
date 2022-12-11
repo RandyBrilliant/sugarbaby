@@ -13,6 +13,7 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Catalog from "./pages/Catalog";
 import Product from "./pages/Product";
+import Privacy from "./pages/Privacy";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:id" element={<Product />} /> 
           <Route path="*" element={<Error />} />

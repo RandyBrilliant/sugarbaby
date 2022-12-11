@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { navigation } from '../utils';
 
-import Logo from '../assets/img/logo.svg';
+import Logo from '../assets/img/logo/logo-christmas.svg';
 
 export default function Navbar() {
   return (

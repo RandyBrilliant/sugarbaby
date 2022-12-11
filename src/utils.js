@@ -91,7 +91,69 @@ export const carouselList = [
   },
 ]
 
+export const carouselChristmasList = [
+  {
+    id: "1",
+    alt: "Milk tea chocolate",
+    urls: "./img/carousel/beary-christmas-1-edit.jpg",
+  },
+  {
+    id: "2",
+    alt: "Mango tango",
+    urls: "./img/carousel/beary-christmas-2-edit.jpg",
+  },
+  {
+    id: "3",
+    alt: "Sunny lemonade",
+    urls: "./img/carousel/beary-christmas-3-edit.jpg",
+  },
+]
+
 export const productList = [
+  {
+    'id': 'jolly-bear',
+    'name': 'Jolly Bear',
+    'full-price': 199000,
+    'slice-price': 0,
+    'description': 'O Christmas Tree, O Christmas Tree~. Tis the perfect cutie gift to hype up this festive season!',
+    'type': 'christmas',
+    'urls': [
+      './img/products/beary-christmas-3-edit.jpg',
+    ]
+  },
+  {
+    'id': 'berry-berry-xmas',
+    'name': 'Berry Berry Xmas',
+    'full-price': 199000,
+    'slice-price': 0,
+    'description': 'Something fresh and christmasy? We got you! Our Japanese Strawberry Shortcake is made of soft, fluffy layers of sponge cake, fresh strawberries, and fresh whipped cream.',
+    'type': 'christmas',
+    'urls': [
+      './img/products/beary-christmas-2-edit.jpg',
+    ]
+  },
+  {
+    'id': 'jingle-bear',
+    'name': 'Jingle Bear',
+    'full-price': 129000,
+    'slice-price': 0,
+    'description': 'Stand under the mistletoe and you will get a kiss they said! Why not gift our mistletoe quiches and get a kiss from your love one? >.<',
+    'type': 'christmas',
+    'urls': [
+      './img/products/beary-christmas-1-edit.jpg',
+    ]
+  },
+  {
+    'id': 'hazel-bear',
+    'name': 'Hazel Bear',
+    'full-price': 23000,
+    'slice-price': 0,
+    'description': 'Specially made this Hazel Cocoa Drink to complete your snack time / to sweeten up someone\'s special day <3.',
+    'type': 'christmas',
+    'urls': [
+      './img/products/hazel-bear.jpg',
+    ]
+  },
   {
     'id': 'vanilla-creme-brule',
     'name': 'Vanilla Crème Brûlée',

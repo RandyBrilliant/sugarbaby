@@ -13,7 +13,7 @@ const Catalog = () => {
           <img src={Images1} alt="Cake" className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300" />
           <div className="w-80 h-80 absolute z-30 justify-center items-center flex opacity-0 group-hover:opacity-100 transition duration-300">
             <div className="w-80 h-80 bg-secondary grid items-center">
-              <h3 className="text-white text-2xl font-serif italic font-light mb-3">Quiches</h3>
+              <h3 className="text-white text-2xl italic font-black mb-3">Quiches</h3>
             </div>
           </div>
         </Link>
@@ -21,7 +21,7 @@ const Catalog = () => {
           <img src={Images2} alt="Cake" className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300" />
           <div className="w-80 h-80 absolute z-30 justify-center items-center flex opacity-0 group-hover:opacity-100 transition duration-300">
             <div className="w-80 h-80 bg-secondary grid items-center box-content">
-              <h3 className="text-white text-2xl font-serif italic font-light mb-3">Cakes</h3>
+              <h3 className="text-white text-2xl italic font-black mb-3">Cakes</h3>
             </div>
           </div>
         </Link>
@@ -29,7 +29,7 @@ const Catalog = () => {
           <img src={Images3} alt="Cake" className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-300" />
           <div className="w-80 h-80 absolute z-30 justify-center items-center flex opacity-0 group-hover:opacity-100 transition duration-300">
             <div className="w-80 h-80 bg-secondary grid items-center">
-              <h3 className="text-white text-2xl font-serif italic font-light mb-3">Breads</h3>
+              <h3 className="text-white text-2xl italic font-black mb-3">Breads</h3>
             </div>
           </div>
         </Link>

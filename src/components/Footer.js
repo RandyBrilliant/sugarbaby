@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/img/logo.svg';
+import Logo from '../assets/img/logo/logo-christmas.svg';
 import { navigation, productList } from '../utils';
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="font-bold uppercase text-lg mb-3">NAVIGATION</h2>
+            <h2 className="font-black uppercase text-lg mb-3">NAVIGATION</h2>
             <nav className="list-none mb-10">
               {navigation.map(item => (
                 <li key={item.name}>
@@ -29,7 +29,22 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="font-bold uppercase text-lg mb-3">SLICE CAKE</h2>
+            <h2 className="font-black uppercase text-lg mb-3">CHRISTMAS LIMITED</h2>
+            <nav className="list-none mb-10">
+              {productList.filter(item => item.type === "christmas").map(item => (
+                <li key={item.id}>
+                  <Link 
+                    to={`/catalog/${item.id}`} 
+                    className="text-gray-900 hover:text-secondary text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </nav>
+          </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="font-black uppercase text-lg mb-3">SLICE CAKE</h2>
             <nav className="list-none mb-10">
               {productList.filter(item => item.type === "cake").map(item => (
                 <li key={item.id}>
@@ -44,7 +59,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="font-bold uppercase text-lg mb-3">QUICHES</h2>
+            <h2 className="font-black uppercase text-lg mb-3">QUICHES</h2>
             <nav className="list-none mb-10">
               {productList.filter(item => item.type === "quiche").map(item => (
                 <li key={item.id}>
@@ -59,7 +74,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="font-bold uppercase text-lg mb-3">BREAD</h2>
+            <h2 className="font-black uppercase text-lg mb-3">BREAD</h2>
             <nav className="list-none mb-10">
               {productList.filter(item => item.type === "bread").map(item => (
                 <li key={item.id}>

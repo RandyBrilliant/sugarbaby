@@ -25,19 +25,21 @@ const Product = () => {
               <div className="bg-gray-100 rounded-lg overflow-hidden relative">
                 <img src={`../${product?.urls[0]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  <img src={`../${product?.urls[1]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
+              {product?.urls.length >= 2 && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gray-100 rounded-lg overflow-hidden">
+                    <img src={`../${product?.urls[1]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
+                  </div>
+                  <div className="bg-gray-100 rounded-lg overflow-hidden">
+                    <img src={`../${product?.urls[2]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
+                  </div>
                 </div>
-                <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  <img src={`../${product?.urls[2]}`} loading="lazy" alt={product?.name} className="w-full h-full object-cover object-center" />
-                </div>
-              </div>
+              )}
             </div>
             <div className="md:py-8">
               <div className="mb-2 md:mb-3">
                 <span className="inline-block text-gray-500 mb-0.5 uppercase">{product?.type}</span>
-                <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold">{product?.name}</h2>
+                <h2 className="text-gray-800 text-2xl lg:text-3xl font-black">{product?.name}</h2>
               </div>
               <div className="mb-4">
                 {product && product["slice-price"] === 0 ? (
@@ -63,12 +65,15 @@ const Product = () => {
                 </p>
               </div>
               <div className="sm:col-span-2 text-center sm:text-left mt-5 md:mt-7 lg:mt-10">
-                <a className="w-full lg:w-auto px-6 py-3 lg:px-10 lg:py-4 relative rounded-full group font-medium text-white inline-block" href="https://wa.me/628116541131">
+                {/* <a className="w-full lg:w-auto px-6 py-3 lg:px-10 lg:py-4 relative rounded-full group font-medium text-white inline-block" href="https://wa.me/628116541131">
                   <span className="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-secondary to-primary"></span>
                   <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded-full opacity-50 from-secondary to-primary"></span>
                   <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-secondary to-primary"></span>
                   <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primary from-secondary"></span>
                   <span className=" relative text-sm font-extrabold">Order Now</span>
+                </a> */}
+                <a href="https://wa.me/628116541131" className="button w-full lg:w-auto rounded-full px-6 py-3 lg:px-10 lg:py-4 m-1 overflow-hidden relative text-md font-medium button-christmas-style" type="submit">
+                  Order Now
                 </a>
               </div>
             </div>
