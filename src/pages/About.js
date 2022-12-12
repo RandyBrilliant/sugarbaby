@@ -33,6 +33,7 @@ const About = () => {
               className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96 transition-shadow duration-300 hover:shadow-xl"
               src={ProfilePicture}
               alt="Catherine Pho"
+              loading="lazy"
             />
             <figcaption className="font-serif font-bold mt-5 text-xl leading-none"><span className="block font-sans font-light uppercase tracking-wide mb-3 text-sm">MEET OUR CHEF</span>Catherine Pho</figcaption>
             <span className="font-normal italic text-sm leading-none">The Founder and Pastry Chef</span>

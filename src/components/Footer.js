@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="mt-10 lg:mt-20 mx-4 border-t-2 sm:mx-6 lg:mx-20 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a href="/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src={Logo} alt="Sugarbaby" className="h-20 object-cover object-center" />
+            <img src={Logo} alt="Sugarbaby" className="h-20 object-cover object-center" loading="lazy" />
           </a>
           <p className="mt-5 text-sm text-gray-500">Serving you only heavenly sweetness. Let us fulfill your cravings, because you are our ultimate sweet ones.</p>
         </div>

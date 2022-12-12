@@ -47,6 +47,7 @@ export default function Navbar() {
                       className="block h-12 w-auto"
                       src={Logo}
                       alt="Sugarbaby"
+                      loading="lazy"
                     />
                   </NavLink>
                 <div className="hidden lg:ml-10 lg:block">
