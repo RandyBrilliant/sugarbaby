@@ -5,9 +5,9 @@ const Menu = () => {
   return (
     <section id="menu" className="px-4 sm:px-6 lg:px-20 lg:mt-20 mt-10">
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 w-full mt-6">
-        {productList.filter(item => item.type === "christmas").map(cake => (
+        {productList.filter(item => item.type === "cake").map(cake => (
           <section key={cake.id} className="relative">
-            <div className="animate-pulse absolute left-0 top-6 bg-red-700 rounded-tr-full rounded-br-full text-white text-sm py-1 px-3 italic font-bold text-shadow shadow-md">Christmas Limited!</div>
+            <div className="animate-pulse absolute left-0 top-6 bg-red-700 rounded-tr-full rounded-br-full text-white text-sm py-1 px-3 italic font-bold text-shadow shadow-md">HOT!</div>
             <Link to={`catalog/${cake.id}`} className="block h-auto rounded-lg shadow-lg bg-white overflow-hidden group">
               <img src={cake.urls[0]} alt={cake.id} className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300" loading="lazy" />
             </Link>

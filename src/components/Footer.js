@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/img/logo/logo-christmas.svg';
+import Logo from '../assets/img/logo.svg';
 import { navigation, productList } from '../utils';
 
 const Footer = () => {
@@ -28,7 +28,7 @@ const Footer = () => {
               ))}
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-black uppercase text-lg mb-3">CHRISTMAS LIMITED</h2>
             <nav className="list-none mb-10">
               {productList.filter(item => item.type === "christmas").map(item => (
@@ -42,7 +42,7 @@ const Footer = () => {
                 </li>
               ))}
             </nav>
-          </div>
+          </div> */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-black uppercase text-lg mb-3">SLICE CAKE</h2>
             <nav className="list-none mb-10">

@@ -10,7 +10,7 @@ const Catalog = () => {
         <meta name="description" content="It has been a long day, sometimes we feel tired and need a mood booster. Let Sugarbaby sweeten your mood, sweeten your day. A slice of cake a day, keeps the bad mood away. Serving you only heavenly sweetness. Let us fulfill your cravings with a dose of cute aegyo, because you are our ultimate sweet ones." />
       </Helmet>
       <section id="menu"  className="px-4 py-16 mx-auto md:px-24 lg:px-8 lg:py-20">
-        <section id="cake" className="lg:mt-20 mt-10">
+        {/* <section id="cake" className="lg:mt-20 mt-10">
           <h2 className="text-3xl font-extrabold text-center lg:text-5xl mb-5">Christmas Limited!</h2>
           <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-x-6 gap-y-12 w-full">
             {productList.filter(item => item.type === "christmas").map(cake => (
@@ -26,7 +26,7 @@ const Catalog = () => {
               </section>
             ))}
           </div>
-        </section>
+        </section> */}
         <section id="cake" className="lg:mt-20 mt-10">
           <h2 className="text-3xl font-extrabold text-center lg:text-5xl mb-5">Cake List</h2>
           <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-x-6 gap-y-12 w-full">

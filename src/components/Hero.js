@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper";
 
-import { carouselChristmasList, merchantList } from "../utils";
+import { carouselList, merchantList } from "../utils";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -39,7 +39,7 @@ const Hero = () => {
           modules={[EffectFade, Autoplay]}
           className="h-full w-full"
         > 
-          {carouselChristmasList.map(cake => (
+          {carouselList.map(cake => (
             <SwiperSlide className="drop-shadow-md" key={cake.id}>
               <img
                 src={cake.urls}
